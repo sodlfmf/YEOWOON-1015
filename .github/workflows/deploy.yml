@@ -6,7 +6,7 @@ on:
 
   push:
 
-    branches: ['main']
+    branches: [main]
 
 
 
@@ -21,10 +21,7 @@ jobs:
     steps:
 
       - uses: actions/checkout@v4
-        
-
-
-
+          
       - name: Install mustache (to update the date)
 
         run: apk add ruby && gem install mustache
