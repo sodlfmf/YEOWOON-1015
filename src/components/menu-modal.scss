@@ -1,0 +1,97 @@
+.modal_dialog {
+  width: 100vh;
+  height: 100%;
+  // margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  color: var(--cl-main-font);
+  background-color: transparent;
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  &::backdrop {
+    background: rgba(30, 30, 30, 1);
+  }
+
+  nav {
+    height: 450px;
+    width: 330px;
+    margin: 0 auto;
+  }
+
+  ul {
+    li {
+      a,
+      .archive_menu {
+        text-transform: uppercase;
+        font-size: 4rem;
+        text-decoration: none;
+        cursor: pointer;
+        color: var(--cl-main-font);
+        &:hover {
+          -webkit-text-stroke: 1px var(--cl-main-font);
+          color: transparent;
+        }
+      }
+    }
+  }
+
+  .archive_menu {
+  }
+
+  .archive_sub_li {
+    display: none;
+    height: 0;
+  }
+
+  .modal_close_Btn {
+    position: absolute;
+    left: 93.3%;
+    bottom: 92%;
+    button {
+      cursor: pointer;
+      font-size: 4rem;
+      &:hover {
+        -webkit-text-stroke: 1px var(--cl-main-font);
+        color: transparent;
+      }
+    }
+  }
+}
+
+// / 스마트폰 모바일(세로) /
+@media only screen and (min-device-width: 375px) and (max-device-width: 479px) {
+  .modal_dialog {
+    width: 100%;
+    padding: 0;
+    transform: translateX(-1px);
+    // ul {
+    //   li {
+    //     a,
+    //     .archive_menu {
+    //       font-size: 3rem;
+    //     }
+    //   }
+    // }
+
+    .modal_close_Btn {
+      left: 86.5%;
+      bottom: 89%;
+    }
+  }
+}
+
+// / 아이폰 SE /
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 375px) {
+  .modal_dialog {
+    width: 100%;
+    .modal_close_Btn {
+      left: 85%;
+      bottom: 87%;
+    }
+  }
+}

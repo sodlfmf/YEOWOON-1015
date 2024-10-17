@@ -1,0 +1,259 @@
+.main_bg {
+  width: auto;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15rem;
+  margin-bottom: 20vh;
+
+  > video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    z-index: 0;
+
+    &::-webkit-media-controls {
+      display: none;
+    }
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    .mainTitle {
+      z-index: 1;
+      margin-bottom: 5rem;
+      position: relative;
+      bottom: 3rem;
+    }
+
+    .script_1,
+    .script_2 {
+      position: relative;
+      z-index: 1;
+      bottom: 3rem;
+      text-align: center;
+    }
+
+    .script_1 {
+      > p {
+        font-size: 3.6rem;
+        margin-bottom: 2.4rem;
+      }
+    }
+    .script_2 {
+      > p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+.main_about_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainArrow {
+  position: absolute;
+  bottom: 2rem;
+  z-index: 1;
+  width: 300px;
+  height: 103px;
+}
+
+@media screen and (max-width: 1440px) {
+  section {
+    .mainTitle {
+      width: 1000px;
+    }
+
+    .script_1 {
+      > p {
+        font-size: 3rem;
+        margin-bottom: 2.1rem;
+      }
+    }
+
+    .script_2 {
+      > p {
+        text-align: center;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .main_bg {
+    section {
+      .mainTitle {
+        width: 800px;
+      }
+      .script_1 {
+        > p {
+          font-size: 2.5rem;
+          margin-bottom: 2.1rem;
+        }
+      }
+      .script_2 {
+        > p {
+          text-align: center;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .main_bg {
+    height: 80vh;
+    margin-bottom: 10vh;
+    section {
+      .mainTitle {
+        width: 600px;
+      }
+      .script_1 {
+        > p {
+          font-size: 2.1rem;
+          margin-bottom: 2.1rem;
+        }
+      }
+      script_2 {
+        text-align: center;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+// / 태블릿, 아이패드 /
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+}
+
+// / 아이패드 프로 /
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+}
+
+// / 스마트폰 모바일(세로) /
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 479px) {
+  .mainArrow {
+    position: absolute;
+    bottom: 1rem;
+    z-index: 1;
+    width: 200px;
+    height: 100px;
+  }
+  .main_bg {
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 33%;
+      // bottom: 2rem;
+
+      .mainTitle {
+        margin-bottom: 2rem;
+        order: 2;
+        bottom: 3rem;
+        width: 350px;
+        height: 100px;
+      }
+
+      .script_1 {
+        order: 1;
+        position: relative;
+        z-index: 1;
+        bottom: 3rem;
+        margin-bottom: 2.4rem;
+        &::after {
+          content: "Uncustomary joy after sentiment fades down";
+          font-size: 2rem;
+        }
+        > p {
+          display: none;
+        }
+      }
+      .script_2 {
+        order: 3;
+        position: relative;
+        z-index: 1;
+        bottom: 3rem;
+
+        > p {
+          font-weight: 200;
+          letter-spacing: -0.08rem;
+          max-width: 22rem;
+          text-align: center;
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+// / 아이폰 SE /
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 375px) {
+  .mainArrow {
+    position: absolute;
+    bottom: 1rem;
+    z-index: 1;
+    width: 150px;
+    height: 100px;
+  }
+  .main_bg {
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 28%;
+
+      .mainTitle {
+        margin-bottom: 2rem;
+        order: 2;
+        bottom: 3rem;
+        width: 300px;
+        height: 100px;
+      }
+
+      .script_1 {
+        order: 1;
+        position: relative;
+        z-index: 1;
+        bottom: 3rem;
+        > p {
+          font-size: 1.7rem;
+          margin-bottom: 2.4rem;
+        }
+      }
+      .script_2 {
+        order: 3;
+        position: relative;
+        z-index: 1;
+        bottom: 3rem;
+
+        > p {
+          font-weight: 200;
+          letter-spacing: -0.1rem;
+          text-align: center;
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
+// / 스마트폰 모바일(가로) /
+
+@media only screen and (min-device-width: 480px) and (max-device-width: 767px) {
+}

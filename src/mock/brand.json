@@ -1,0 +1,18 @@
+[
+    {
+        "id" : "1",
+        "logo" : "/img/streeLogo.png",
+        "determination" : "FIND YOUR BLUE",
+        "imgUrl" : "/img/stree.jpg",
+        "instagram" : "https://www.instagram.com/s.tree_official/",
+        "webpage" : "https://www.s-tree.kr/us"
+    },
+    {
+        "id" : "2",
+        "logo" : "/img/soonheeLogo.png",
+        "determination" : "MAKE A DAY UNIQUE",
+        "imgUrl" : "/img/soonhee.jpg",
+        "instagram" : "https://www.instagram.com/soonhee_official/",
+        "webpage" : "https://soonhee.com/"
+    }
+]

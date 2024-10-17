@@ -1,0 +1,27 @@
+.main_floating_bar {
+  position: sticky;
+  bottom: 0;
+  width: 100vw;
+  height: 10vh;
+  .link {
+    opacity: 0;
+    width: 100px;
+    height: auto;
+    right: 10px;
+    position: absolute;
+    bottom: 1rem;
+  }
+  a {
+    color: var(--cl-main-font);
+  }
+}
+
+@media screen and (max-width : 768px) {
+  .main_floating_bar{
+      text-align: center;
+      .link{
+          right: 0px;
+      }
+  }
+  
+}
