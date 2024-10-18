@@ -11,9 +11,11 @@ export async function SandContactEmail(emailFrom : ContactType) {
     const data = await response.json();
     
     console.log(data);
+    console.log(data.status);
+    console.log("어디있냐...");
     if(!response.ok){   
-        throw new Error(data.message || "Sending message...");
+        throw new Error(data.message || "Server request failed");
     }
 
-    return data.message;
+    return {message : data.message, status : data.status};
 }

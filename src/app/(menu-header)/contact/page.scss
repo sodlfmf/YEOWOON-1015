@@ -11,55 +11,57 @@
   h1 {
     font-size: 5rem;
   }
-
+  
   > div {
     width: 50%;
-
+    
     &:nth-child(1) {
       display: flex;
       justify-content: flex-end;
     }
   }
-  .contact_Us {
-    margin: 3rem 5rem;
-    margin-bottom: 0;
-    height: 80vh;
-    min-height: 600px;
-    background-color: rgb(98, 98, 98);
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 100%;
-    max-width: 800px;
-  
-    input, textarea {
-      padding: 0.5rem;
-      font-size: 2rem;
-      color: white;
-      background: none;
-      border-bottom: 0.2rem solid gray;
-      width: 30rem;
-      margin: 1rem;
-      resize: none;
-    }
-  
-    input:focus, textarea:focus {
-      animation-duration: 2s;
-      border-bottom: 0.2rem solid white;
-      outline: none;
-    }
-  
-    button {
-      width: 12rem;
-      font-size: 2.2rem;
-      padding: 1.2rem;
-      border-bottom: 0.1rem solid white;
-  
-      &:hover {
-        cursor: pointer;
-      }
+}
+.contact_Us {
+  margin: 3rem 5rem;
+  margin-bottom: 0;
+  height: 80vh;
+  min-height: 600px;
+  background-color: rgb(98, 98, 98);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  padding-bottom: 3rem;
+
+  input, textarea {
+    padding: 0.5rem;
+    font-size: 2rem;
+    color: white;
+    background: none;
+    border-bottom: 0.2rem solid gray;
+    width: 30rem;
+    margin: 1rem;
+    resize: none;
+  }
+
+  input:focus, textarea:focus {
+    animation-duration: 2s;
+    border-bottom: 0.2rem solid white;
+    outline: none;
+  }
+
+  button {
+    width: 12rem;
+    font-size: 2.2rem;
+    padding: 1.2rem;
+    border-bottom: 0.1rem solid white;
+
+    &:hover {
+      cursor: pointer;
     }
   }
 }
@@ -88,10 +90,14 @@ input:autofill:active {
 }
 
 
-#submit_message{
+.submit_message{
+  position: absolute;
   font-size: 2rem;
   margin-top: 2rem;
   text-align: center;
+  perspective:400px;
+  width: auto;
+  bottom: 2rem;
 }
 
 

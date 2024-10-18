@@ -14,7 +14,7 @@ export async function POST(req: Request) {
         
         if (Object.keys(body).length != 3 ) {
             console.log("실패-길이");
-            return new Response(JSON.stringify({ message: "Failed to send inquiry - Condition not met" }), {
+            return new Response(JSON.stringify({ message: "Failed to send message - Condition not met" , status:500}), {
                 status: 500,
             });
         } 
@@ -23,7 +23,7 @@ export async function POST(req: Request) {
         console.log("실패-컴포넌트");
         
         if(sandchack[1]=== false){
-            return new Response(JSON.stringify({ message: `${sandchack[0]}` }), {
+            return new Response(JSON.stringify({ message: `${sandchack[0]}` , status:500}), {
                 status: 500,
             });
             
@@ -33,13 +33,13 @@ export async function POST(req: Request) {
             console.log("실패-전송");
             await sendEmail(body);
             console.log("성공");
-            return new Response(JSON.stringify({ message: "Your inquiry has been sent." }), {
+            return new Response(JSON.stringify({ message: "Your message has been sent." ,status:200 }), {
                 status: 200,
             }); 
         }
     } catch (error) {
         console.log("실패-서버");
-        return new Response(JSON.stringify({ message: "Failed to send inquiry - Server error" }), {
+        return new Response(JSON.stringify({ message: "Failed to send message - Server error", status:500 }), {
             status: 500,
         });
     }

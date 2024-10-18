@@ -10,6 +10,11 @@ export const transporter = nodemailer.createTransport({
     }
 })
 
+export type SendMessageType={
+    message : string,
+    status : number,
+}
+
 export type ContactType={
     name : string;
     email: string;
@@ -23,17 +28,20 @@ type MAilOptionType = {
     html : string;
 }
 
+
 export function sendEmail({ name, email, inquiry} : ContactType){
     const mailOption : MAilOptionType ={
         to : process.env.NEXT_PUBLIC_EMAIL || '',
         email,
-        subject : 'YEOWOON 문의 메일',
+        subject : `[YEOWOON] Inquir from ${email}`,
         html : `
-        <h3> 문의 내용 </h3>
-        <div> ${inquiry}</div>
+        <h3>Yeowoon Inquir from...</h3>
         </br>
-        <p> 발신자 메일 : ${email}</p>
-        <p>발신인 : ${name}</p>`
+        <div>성함: ${name}</div>
+        <div>이메일 주소: ${email}</div>
+        </br>
+        <h3>문의 내용 </h3>
+        <p>${inquiry}</p>`
     };
     return transporter.sendMail(mailOption);
 }
