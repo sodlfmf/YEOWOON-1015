@@ -29,9 +29,9 @@ const MenuModal = () => {
   useEffect(() => {
     if (!dialogRef.current?.open) {
       dialogRef.current?.showModal();
-      dialogRef.current?.scrollTo({
-        top: 0,
-      });
+      // dialogRef.current?.scrollTo({
+      //   top: 0,
+      // });
     } else if (dialogRef.current?.open === true) {
       dialogRef.current?.close();
     }
