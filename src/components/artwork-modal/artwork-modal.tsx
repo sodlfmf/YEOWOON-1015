@@ -24,11 +24,15 @@ const ArtworkModal = () => {
     createArtworkStore();
 
   useEffect(() => {
-    let body = document.body.style;
+    let bodyStyle = document.body.style;
+    let body = document.body;
     if (isArtworkModalOpen === true) {
-      body.overflowY = "hidden";
+      // bodyStyle.overflowY = "hidden";
+      lock(body);
+      unlock(dialogRef.current);
     } else {
-      body.overflowY = "scroll";
+      // bodyStyle.overflowY = "scroll";
+      unlock(body);
     }
   }, [isArtworkModalOpen]);
 

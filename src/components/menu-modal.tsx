@@ -17,11 +17,15 @@ const MenuModal = () => {
   const router = useRouter();
 
   useEffect(() => {
-    let body = document.body.style;
+    let bodyStyle = document.body.style;
+    let body;
     if (isModalOpen === true) {
-      body.overflowY = "hidden";
+      bodyStyle.overflowY = "hidden";
+      lock(document.body);
     } else if (isModalOpen === false) {
-      body.overflowY = "scroll";
+      bodyStyle.overflowY = "scroll";
+      unlock(document.body);
+      lock(dialogRef.current);
     }
   }, [isModalOpen]);
 
@@ -83,7 +87,7 @@ const MenuModal = () => {
         <button
           onClick={() => {
             setIsModalOpen(false);
-            // unlock(document.body);
+            unlock(document.body);
           }}>
           <svg
             width="36"
@@ -118,7 +122,7 @@ const MenuModal = () => {
                         <a
                           onClick={() => {
                             setIsModalOpen(false);
-                            // unlock(document.body);
+                            unlock(document.body);
                             router.push(`/${link}/${sub}`);
                           }}>
                           {sub}
@@ -133,12 +137,12 @@ const MenuModal = () => {
                 <a
                   onClick={() => {
                     if (pathname === link) {
-                      // unlock(document.body);
+                      unlock(document.body);
                       setIsModalOpen(false);
                       router.push(`/${link}`);
                     } else {
                       setTimeout(() => {
-                        // unlock(document.body);
+                        unlock(document.body);
                         setIsModalOpen(false);
                         router.push(`/${link}`);
                       }, 200);
