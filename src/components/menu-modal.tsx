@@ -18,11 +18,9 @@ const MenuModal = () => {
 
   useEffect(() => {
     if (isModalOpen === true) {
-      // lock(document.body);
-      document.body.style.overflowY = "hidden";
+      lock(document.body);
     } else if (isModalOpen === false) {
-      // unlock(document.body);
-      document.body.style.overflowY = "scroll";
+      unlock(document.body);
     }
   }, [isModalOpen]);
 

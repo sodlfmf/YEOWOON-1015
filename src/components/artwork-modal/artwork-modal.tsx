@@ -25,11 +25,11 @@ const ArtworkModal = () => {
 
   useEffect(() => {
     if (isArtworkModalOpen === true) {
-      // lock(document.body);
-      document.body.style.overflowY = "hidden";
+      lock(document.body);
+      // document.body.style.overflowY = "hidden";
     } else {
-      // unlock(document.body);
-      document.body.style.overflowY = "scroll";
+      unlock(document.body);
+      // document.body.style.overflowY = "scroll";
     }
   }, [isArtworkModalOpen]);
 
