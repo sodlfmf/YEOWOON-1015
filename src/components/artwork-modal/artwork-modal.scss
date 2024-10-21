@@ -225,6 +225,7 @@
 
     .art_modal_grid.artistType.second_Page {
       overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
 
       grid-template-rows: 5rem 60rem 3rem;
       .art_modal_article {
