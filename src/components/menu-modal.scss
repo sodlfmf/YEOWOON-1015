@@ -9,14 +9,15 @@
   position: absolute;
   z-index: 2;
   text-align: center;
-  &::backdrop {
+  &::backdrop,
+  & + .backdrop {
     background: rgba(30, 30, 30, 1);
   }
 
   nav {
+    // margin: 0 auto;
     width: 90vw;
     height: 100vh;
-    // margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;

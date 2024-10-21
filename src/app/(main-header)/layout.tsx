@@ -34,7 +34,10 @@ export default function RootLayout({
         </div>
         <div id="portal" />
       </body>
-      <Script src="@/util/dialog" strategy="afterInteractive" />
+      <Script
+        src="https://cdn.jsdelivr.net/gh/nuxodin/dialog-polyfill@1.4.2/dialog.min.js"
+        strategy="afterInteractive"
+      />
     </html>
   );
 }

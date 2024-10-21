@@ -8,7 +8,8 @@
   justify-content: center;
   align-items: center;
   // background-color: blue;
-  &::backdrop {
+  &::backdrop,
+  & + .backdrop {
     background: rgba(30, 30, 30, 0.7);
   }
 
