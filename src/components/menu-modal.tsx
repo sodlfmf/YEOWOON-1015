@@ -18,9 +18,9 @@ const MenuModal = () => {
 
   useEffect(() => {
     if (isModalOpen === true) {
-      lock(document.body);
+      // lock(document.body);
     } else if (isModalOpen === false) {
-      unlock(document.body);
+      // unlock(document.body);
     }
   }, [isModalOpen]);
 

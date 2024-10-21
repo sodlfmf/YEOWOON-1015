@@ -20,17 +20,14 @@ const ArtworkModal = () => {
   const { isArtworkModalOpen, setIsArtworkModalOpen } =
     createArtworkModalStore();
 
-  const {
-    isModalTypeArtist,
-    selectedArtistData,
-    selectedCampaignData,
-  } = createArtworkStore();
+  const { isModalTypeArtist, selectedArtistData, selectedCampaignData } =
+    createArtworkStore();
 
   useEffect(() => {
     if (isArtworkModalOpen === true) {
-      lock(document.body);
+      // lock(document.body);
     } else {
-      unlock(document.body);
+      // unlock(document.body);
     }
   }, [isArtworkModalOpen]);
 
