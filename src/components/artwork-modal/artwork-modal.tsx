@@ -28,10 +28,11 @@ const ArtworkModal = () => {
     let body = document.body;
     if (isArtworkModalOpen === true) {
       // bodyStyle.overflowY = "hidden";
-      lock(body);
       unlock(dialogRef.current);
+      lock(body);
     } else {
       // bodyStyle.overflowY = "scroll";
+      lock(dialogRef.current);
       unlock(body);
     }
   }, [isArtworkModalOpen]);

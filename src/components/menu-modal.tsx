@@ -20,12 +20,12 @@ const MenuModal = () => {
     let bodyStyle = document.body.style;
     let body;
     if (isModalOpen === true) {
-      bodyStyle.overflowY = "hidden";
+      // bodyStyle.overflowY = "hidden";
       lock(document.body);
     } else if (isModalOpen === false) {
-      bodyStyle.overflowY = "scroll";
+      // bodyStyle.overflowY = "scroll";
       unlock(document.body);
-      lock(dialogRef.current);
+      // lock(dialogRef.current);
     }
   }, [isModalOpen]);
 
