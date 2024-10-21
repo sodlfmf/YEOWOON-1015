@@ -65,7 +65,6 @@ export default function Home() {
         onTouchMove={(e) => {
           if (isModalOpen === true) return;
           if (wheel === true) {
-            console.log(1);
             setAboutY(true);
             setWheel(true);
           }
@@ -94,9 +93,9 @@ export default function Home() {
           </div>
           <div className="script_2">
             <p>
-              We create jewelry that lasts a long time, like a
-              yeowoon, <br />a feeling people can look back on for as
-              long as they want
+              We create jewelry that lasts a long time, like a yeowoon,{" "}
+              <br />a feeling people can look back on for as long as they
+              want
             </p>
           </div>
         </section>

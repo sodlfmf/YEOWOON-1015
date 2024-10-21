@@ -6,7 +6,7 @@
   position: sticky;
   padding-top: 2.8rem;
   top: -2rem;
-  z-index: 1;
+  z-index: 2;
   align-items: center;
   display: flex;
   justify-content: space-around;
@@ -24,9 +24,11 @@
   }
 
   .menu_bar_container {
+    z-index: 2;
     display: none;
   }
   .menu_bar_Btn {
+    z-index: 2;
     cursor: pointer;
   }
 
