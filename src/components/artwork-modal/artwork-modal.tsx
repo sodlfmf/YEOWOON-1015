@@ -24,12 +24,11 @@ const ArtworkModal = () => {
     createArtworkStore();
 
   useEffect(() => {
+    let body = document.body.style;
     if (isArtworkModalOpen === true) {
-      lock(document.body);
-      // document.body.style.overflowY = "hidden";
+      body.overflowY = "hidden";
     } else {
-      unlock(document.body);
-      // document.body.style.overflowY = "scroll";
+      body.overflowY = "scroll";
     }
   }, [isArtworkModalOpen]);
 
