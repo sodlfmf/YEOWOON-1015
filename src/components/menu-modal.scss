@@ -1,4 +1,6 @@
 .modal_dialog {
+  width: 90vw;
+  height: 100vh;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -16,11 +18,10 @@
 
   nav {
     // margin: 0 auto;
-    width: 90vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
   }
 
   ul {

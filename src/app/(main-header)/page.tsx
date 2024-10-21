@@ -26,11 +26,11 @@ export default function Home() {
   const { isModalOpen, setIsModalOpen } = createModalStore();
 
   useEffect(() => {
-    if (aboutY === false) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflowY = "scroll";
-    }
+    // if (aboutY === false) {
+    //   document.body.style.overflow = "hidden";
+    // } else {
+    //   document.body.style.overflowY = "scroll";
+    // }
 
     mainLenis();
     ScrollTrigger.create({
@@ -40,6 +40,8 @@ export default function Home() {
       once: true,
       pinSpacing: false,
       onEnter() {
+        setAtl(true);
+        commonLenis();
         gsap.to(".link", {
           opacity: 1,
           duration: 0.5,
@@ -51,10 +53,6 @@ export default function Home() {
           },
         });
       },
-      onLeave() {
-        setAtl(true);
-        commonLenis();
-      },
     });
   }, [aboutY]);
 
@@ -62,20 +60,21 @@ export default function Home() {
     <>
       <div
         className="main_bg"
-        onTouchMove={(e) => {
-          if (isModalOpen === true) return;
-          if (wheel === true) {
-            setAboutY(true);
-            setWheel(true);
-          }
-        }}
-        onWheel={(e) => {
-          if (isModalOpen === true) return;
-          if (wheel === true) {
-            setAboutY(true);
-            setWheel(true);
-          }
-        }}>
+        // onTouchMove={(e) => {
+        //   if (isModalOpen === true) return;
+        //   if (wheel === true) {
+        //     setAboutY(true);
+        //     setWheel(true);
+        //   }
+        // }}
+        // onWheel={(e) => {
+        //   if (isModalOpen === true) return;
+        //   if (wheel === true) {
+        //     setAboutY(true);
+        //     setWheel(true);
+        //   }
+        // }}
+      >
         <video loop muted autoPlay playsInline>
           <source src="/video/mainBG.mp4" type="video/mp4" />
         </video>
@@ -118,20 +117,20 @@ export default function Home() {
         </svg>
         <MenuModal />
       </div>
-      {aboutY === true && (
-        <div className="main_about_container">
-          <AboutYEOWOON />
-          {atl === true && (
-            <>
-              <AboutTl />
-              <AboutTeam />
-              <AboutSwiper />
-              <AboutHQ />
-            </>
-          )}
-          <MainFloatingBar />
-        </div>
-      )}
+      {/* {aboutY === true && ( */}
+      <div className="main_about_container">
+        <AboutYEOWOON />
+        {atl === true && (
+          <>
+            <AboutTl />
+            <AboutTeam />
+            <AboutSwiper />
+            <AboutHQ />
+          </>
+        )}
+        <MainFloatingBar />
+      </div>
+      {/* )} */}
     </>
   );
 }
