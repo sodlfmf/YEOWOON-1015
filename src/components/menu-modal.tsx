@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import "./menu-modal.scss";
 import { createPortal } from "react-dom";
 import { createModalStore } from "@/store/modal-store";
@@ -8,7 +8,6 @@ import { archiveSubMenu, headerMenu } from "@/mock/data";
 import { gsap } from "gsap";
 import { usePathname, useRouter } from "next/navigation";
 import { useGSAP } from "@gsap/react";
-import { lock, unlock } from "tua-body-scroll-lock";
 
 const MenuModal = () => {
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -17,15 +16,22 @@ const MenuModal = () => {
   const router = useRouter();
 
   useEffect(() => {
-    let bodyStyle = document.body.style;
-    let body;
     if (isModalOpen === true) {
-      // bodyStyle.overflowY = "hidden";
-      lock(document.body);
+      document.body.style.overflowY = "hidden";
+      gsap.to(".main_container", {
+        position: "fixed",
+        height: "100%",
+        width: "100%",
+      });
+      // gsap.to(".main_about_container", { display: "none" });
     } else if (isModalOpen === false) {
-      // bodyStyle.overflowY = "scroll";
-      unlock(document.body);
-      // lock(dialogRef.current);
+      document.body.style.overflowY = "";
+      gsap.to(".main_container", {
+        position: "",
+        height: "",
+        width: "",
+      });
+      // gsap.to(".main_about_container", { display: "flex" });
     }
   }, [isModalOpen]);
 
@@ -33,9 +39,9 @@ const MenuModal = () => {
     if (!dialogRef.current?.open) {
       dialogRef.current?.showModal();
     } else if (dialogRef.current?.open === true) {
-      // dialogRef.current?.scrollTo({
-      //   top: 0,
-      // });
+      dialogRef.current?.scrollTo({
+        top: 0,
+      });
       dialogRef.current?.close();
     }
   });
@@ -47,14 +53,10 @@ const MenuModal = () => {
 
     tl.set(".archive_sub_li", {
       display: "list-item",
-    })
-      .set(".archive_menu", {
-        display: "none",
-      })
-      .to(".archive_sub_li", {
-        duration: 1,
-        height: "5rem",
-      });
+    }).to(".archive_sub_li", {
+      duration: 1,
+      height: "2.5rem",
+    });
   };
 
   useGSAP(() => {
@@ -80,14 +82,12 @@ const MenuModal = () => {
   return createPortal(
     <dialog
       onClose={() => setIsModalOpen(false)}
-      data-lenis-prevent
       className="modal_dialog"
       ref={dialogRef}>
       <div className="modal_close_Btn">
         <button
           onClick={() => {
             setIsModalOpen(false);
-            unlock(document.body);
           }}>
           <svg
             width="36"
@@ -122,7 +122,7 @@ const MenuModal = () => {
                         <a
                           onClick={() => {
                             setIsModalOpen(false);
-                            unlock(document.body);
+
                             router.push(`/${link}/${sub}`);
                           }}>
                           {sub}
@@ -137,12 +137,10 @@ const MenuModal = () => {
                 <a
                   onClick={() => {
                     if (pathname === link) {
-                      unlock(document.body);
                       setIsModalOpen(false);
                       router.push(`/${link}`);
                     } else {
                       setTimeout(() => {
-                        unlock(document.body);
                         setIsModalOpen(false);
                         router.push(`/${link}`);
                       }, 200);

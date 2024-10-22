@@ -1,4 +1,6 @@
 .art_modal_dialog {
+  height: 100%;
+
   width: 90vw;
   height: 95%;
   padding: 0;
@@ -7,6 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   // background-color: blue;
   &::backdrop,
   & + .backdrop {
@@ -91,7 +94,10 @@
       .article_content {
         .camp_artwork_img {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+          grid-template-columns: repeat(
+            auto-fill,
+            minmax(400px, 1fr)
+          );
           grid-template-rows: repeat(auto-fill, minmax(400px, 1fr));
           img {
             object-fit: contain;
@@ -121,13 +127,21 @@
       text-align: center;
     }
     .article_content.vertical_half {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      grid-template-rows: 1fr;
       gap: 3rem;
       padding: 3rem;
       .artist_artwork_img {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
         width: 400px;
         display: flex;
         justify-content: center;
+      }
+      .artwork_script {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
       }
     }
   }
@@ -182,10 +196,63 @@
         }
       }
     }
+
+    .art_modal_article {
+      .article_content.vertical_half {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 500px;
+        gap: 1rem;
+        padding: 1rem;
+        .artist_artwork_img {
+          display: flex;
+          justify-content: center;
+          object-fit: contain;
+          // grid-column: 1 / 2;
+          // grid-row: 1 / 2;
+          // width: 200px;
+          // height: 150px;
+
+          // display: flex;
+          // justify-content: center;
+        }
+        .artwork_script {
+          grid-column: 2 / 3;
+          grid-row: 1 / 2;
+        }
+      }
+    }
   }
 }
 
 @media screen and (max-width: 1280px) {
+  .art_modal_container {
+    .art_modal_article {
+      .article_content.vertical_half {
+        // display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 600px 3rem;
+        gap: 1rem;
+        padding: 1rem;
+        .artist_artwork_img {
+          display: flex;
+          justify-content: center;
+          object-fit: contain;
+          // grid-column: 1 / 2;
+          grid-row: 1 / 2;
+          // width: 200px;
+          // height: 150px;
+
+          // display: flex;
+          // justify-content: center;
+        }
+        .artwork_script {
+          grid-column: 1 / 2;
+          grid-row: 2 / 3;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1080px) {
@@ -383,7 +450,10 @@
             display: grid;
             margin: 0 auto;
             max-width: 85%;
-            grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+            grid-template-columns: repeat(
+              auto-fill,
+              minmax(315px, 1fr)
+            );
             grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
             > div {
               height: 300px;
@@ -402,7 +472,10 @@
     .art_modal_grid.artistType.second_Page {
       .art_modal_article {
         .artist_imgs {
-          grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+          grid-template-columns: repeat(
+            auto-fill,
+            minmax(340px, 1fr)
+          );
         }
         .article_content {
           display: flex;

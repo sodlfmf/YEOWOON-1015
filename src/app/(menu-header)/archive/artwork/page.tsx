@@ -13,11 +13,20 @@ import CampaignImgItem from "@/components/artwork-component/campaign-img-Item";
 import ArtistImgItem from "@/components/artwork-component/artist-img-Item";
 import { useEffect, useRef, useState } from "react";
 
+import { createArtworkModalStore } from "@/store/modal-store";
+
 const Artwork = () => {
   const campTlRef = useRef<GSAPTimeline>();
   const artistTlRef = useRef<GSAPTimeline>();
-
+  const { isArtworkModalOpen, setIsArtworkModalOpen } =
+    createArtworkModalStore();
   gsap.registerPlugin(gsap);
+
+  useEffect(() => {
+    if (isArtworkModalOpen === true) {
+    } else {
+    }
+  }, [isArtworkModalOpen]);
 
   useGSAP(() => {
     const { toArray } = gsap.utils;
@@ -28,20 +37,18 @@ const Artwork = () => {
         xPercent: -45,
         items: toArray(".camp.img_item"),
         tl: campTlRef,
-        tlParam: { speed: 15, duration: 30, repeatDelay: -8 },
+        tlParam: { speed: 25, duration: 30, repeatDelay: -14 },
       },
       {
         container: toArray(".artist.item_container"),
         xPercent: 45,
         items: toArray(".artist.img_item"),
         tl: artistTlRef,
-        tlParam: { speed: -20, duration: 40, repeatDelay: -6 },
+        tlParam: { speed: -30, duration: 40, repeatDelay: -18 },
       },
     ];
 
-    const tlArray: React.MutableRefObject<
-      GSAPTimeline | undefined
-    >[] = [];
+    const tlArray: React.MutableRefObject<GSAPTimeline | undefined>[] = [];
 
     let horizonDefaults = {
       defaults: {

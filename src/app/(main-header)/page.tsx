@@ -5,7 +5,7 @@ import Image from "next/image";
 import MenuModal from "@/components/menu-modal";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import AboutYEOWOON from "@/components/about-component/about-YEOWOON";
 import { commonLenis, mainLenis } from "@/util/lenis";
 import AboutTl from "@/components/about-component/about-tl";
@@ -16,6 +16,20 @@ import MainFloatingBar from "@/components/main-floating-bar";
 import { useGSAP } from "@gsap/react";
 import { createModalStore } from "@/store/modal-store";
 
+// export const useScroll = () => {
+//   const [state, setState] = useState({
+//     y: 0,
+//   });
+//   const onScroll = () => {
+//     setState({ y: window.scrollY });
+//   };
+//   useEffect(() => {
+//     window.addEventListener("scroll", onScroll);
+//     return () => window.removeEventListener("scroll", onScroll);
+//   }, []);
+//   return state;
+// };
+
 export default function Home() {
   gsap.registerPlugin(gsap);
   gsap.registerPlugin(ScrollTrigger);
@@ -23,15 +37,30 @@ export default function Home() {
   const [wheel, setWheel] = useState(true);
   const [aboutY, setAboutY] = useState(false);
   const [atl, setAtl] = useState(false);
+
   const { isModalOpen, setIsModalOpen } = createModalStore();
 
-  useEffect(() => {
-    if (aboutY === false) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflowY = "scroll";
-    }
+  // const { y } = useScroll();
+  // const [yy, setYY] = useState();
 
+  useEffect(() => {
+    if (isModalOpen === true) {
+      gsap.to(".main_about_container", { display: "none" });
+      // sessionStorage.setItem(
+      //   "scrollPos",
+      //   JSON.stringify(`{scrollY : ${yy}}`)
+      // );
+    } else {
+      gsap.to(".main_about_container", { display: "flex" });
+      const scrollPos = sessionStorage.getItem("scrollPos");
+      // if (scrollPos) {
+      //   window.scrollTo(0, JSON.parse(scrollPos));
+      //   sessionStorage.removeItem("scrollPos");
+      // }
+    }
+  }, [isModalOpen]);
+
+  useGSAP(() => {
     mainLenis();
     ScrollTrigger.create({
       trigger: ".ay_container",
@@ -91,9 +120,9 @@ export default function Home() {
           </div>
           <div className="script_2">
             <p>
-              We create jewelry that lasts a long time, like a yeowoon,{" "}
-              <br />a feeling people can look back on for as long as they
-              want
+              We create jewelry that lasts a long time, like a
+              yeowoon, <br />a feeling people can look back on for as
+              long as they want
             </p>
           </div>
         </section>

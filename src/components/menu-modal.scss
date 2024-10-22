@@ -1,6 +1,6 @@
 .modal_dialog {
-  width: 90vw;
-  height: 100vh;
+  width: 100%;
+  height: inherit;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -11,17 +11,14 @@
   position: absolute;
   z-index: 2;
   text-align: center;
+  overflow-y: hidden;
+
   &::backdrop,
   & + .backdrop {
     background: rgba(30, 30, 30, 1);
   }
 
   nav {
-    // margin: 0 auto;
-
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
   }
 
   ul {
@@ -45,6 +42,13 @@
   }
 
   .archive_sub_li {
+    margin: 0 auto;
+    width: 15rem;
+    line-height: -2px;
+    background-color: var(--cl-about-bg);
+    a {
+      font-size: 2rem;
+    }
     display: none;
     height: 0;
   }

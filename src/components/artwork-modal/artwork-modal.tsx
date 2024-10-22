@@ -10,7 +10,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, A11y } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 import { createArtworkStore } from "@/store/artwork-store";
-import { lock, unlock } from "tua-body-scroll-lock";
 
 const ArtworkModal = () => {
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -20,26 +19,29 @@ const ArtworkModal = () => {
   const { isArtworkModalOpen, setIsArtworkModalOpen } =
     createArtworkModalStore();
 
-  const { isModalTypeArtist, selectedArtistData, selectedCampaignData } =
-    createArtworkStore();
+  const {
+    isModalTypeArtist,
+    selectedArtistData,
+    selectedCampaignData,
+  } = createArtworkStore();
 
   useEffect(() => {
-    let bodyStyle = document.body.style;
-    let body = document.body;
     if (isArtworkModalOpen === true) {
-      // bodyStyle.overflowY = "hidden";
-      unlock(dialogRef.current);
-      lock(body);
+      document.body.style.overflowY = "hidden";
+      gsap.to(".artwork_container", {
+        position: "fixed",
+        height: "100%",
+        width: "100%",
+      });
     } else {
-      // bodyStyle.overflowY = "scroll";
-      lock(dialogRef.current);
-      unlock(body);
+      document.body.style.overflowY = "";
+      gsap.to(".artwork_container", {
+        position: "",
+        height: "",
+        width: "",
+      });
     }
   }, [isArtworkModalOpen]);
-
-  function touch(e: TouchEvent) {
-    e.preventDefault();
-  }
 
   useEffect(() => {
     if (!dialogRef.current?.open) {
@@ -47,10 +49,8 @@ const ArtworkModal = () => {
       dialogRef.current?.scrollTo({
         top: 0,
       });
-      document.body.removeEventListener("touchmove", (e) => touch(e));
     } else if (dialogRef.current?.open === true) {
       dialogRef.current?.close();
-      document.body.addEventListener("touchmove", (e) => touch(e));
     }
   });
 
@@ -59,10 +59,9 @@ const ArtworkModal = () => {
   if (!isArtworkModalOpen) return null;
   return createPortal(
     <dialog
-      onClose={() => setIsArtworkModalOpen(isArtworkModalOpen)}
-      data-lenis-prevent
       className="art_modal_dialog"
-      ref={dialogRef}>
+      ref={dialogRef}
+      onClose={() => setIsArtworkModalOpen(false)}>
       {isModalTypeArtist === false ? (
         <SwiperModal isSecondPage={isSecondPage} />
       ) : selectedArtistData[0].hasSeries === true ? (
