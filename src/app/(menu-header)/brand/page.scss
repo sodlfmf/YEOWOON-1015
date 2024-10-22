@@ -89,12 +89,13 @@
     padding-top: 1rem;
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
   }
 
   img {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
+    margin: 0px 4rem;
   }
 }
 
@@ -123,10 +124,6 @@
     font-size: 2.3rem;
     min-width: 500px;
     padding-bottom: 0.5rem;
-    img {
-      width: 80px;
-      height: 80px;
-    }
 
     div {
       padding-top: 0.5rem;
@@ -214,10 +211,10 @@
     min-width: 300px;
     padding-bottom: 0.5rem;
     height: auto;
-
-    div {
-      justify-content: space-around;
+    img{
+      margin: 0px 3rem;
     }
+
   }
 }
 
@@ -229,8 +226,8 @@
     .brand_link{
       font-size: 2.4rem;
       img{
-        width: 100px;  
-        height: 100px;
+        width: 60px;  
+        height: 60px;
       }
     }
 

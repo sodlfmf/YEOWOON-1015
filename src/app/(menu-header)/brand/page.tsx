@@ -28,17 +28,17 @@ const Brand = () => {
                 <p>{item.determination}</p>
               </div>
               <div>
-                <a href={item.instagram}>
-                  <Image
-                    src="/img/brandInsta.png"
-                    alt="insta"
-                    width={80}
-                    height={80}></Image>
-                </a>
                 <a href={item.webpage}>
                   <Image
                     src="/img/brandWeb.png"
                     alt="wed"
+                    width={80}
+                    height={80}></Image>
+                </a>
+                <a href={item.instagram}>
+                  <Image
+                    src="/img/brandInsta.png"
+                    alt="insta"
                     width={80}
                     height={80}></Image>
                 </a>
