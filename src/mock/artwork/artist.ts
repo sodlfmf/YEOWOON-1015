@@ -5,7 +5,7 @@ export const artistData = [
     nation: "/img/artwork/artist/nation/KR.png",
     born: 1991,
     logoImgUrl: "/img/artwork/artist/sl/SeonglibLogo.png",
-    Instagram: "seonglib/",
+    Instagram: ["seonglib"],
     WebSite: "www.seonglib.com",
     Email: "",
     scriptKor:
@@ -23,7 +23,7 @@ export const artistData = [
     nation: "/img/artwork/artist/nation/KR.png",
     born: 1983,
     logoImgUrl: "/img/artwork/artist/lk/LeeKLogo.png",
-    Instagram: "leekillust",
+    Instagram: ["leekillust"],
     WebSite: "www.leekillust.com/",
     Email: "leekillust@gmail.com",
     scriptKor:
@@ -41,7 +41,7 @@ export const artistData = [
     nation: "/img/artwork/artist/nation/KR.png",
     born: 1988,
     logoImgUrl: "/img/artwork/artist/zip/zipLogo.jpg",
-    Instagram: "zipcy",
+    Instagram: ["zipcy"],
     WebSite: "linktr.ee/zipcy",
     Email: "zipcy88@gmail.com",
     scriptKor:
@@ -63,7 +63,7 @@ export const artistData = [
     nation: "/img/artwork/artist/nation/KR.png",
     born: 1987,
     logoImgUrl: "/img/artwork/artist/abangLogo.jpg",
-    Instagram: "aaaaabang",
+    Instagram: ["aaaaabang"],
     WebSite: "www.aaaaabang.com/",
     Email: "abang0209@naver.com",
     scriptKor:
@@ -81,7 +81,7 @@ export const artistData = [
     nation: "/img/artwork/artist/nation/KR.png",
     born: 0,
     logoImgUrl: "/img/artwork/artist/ariLogo.jpg",
-    Instagram: "ari.nunnunano",
+    Instagram: ["ari.nunnunano"],
     WebSite: "inourm.imweb.me/",
     Email: "ari_nunnunano@naver.com",
     scriptKor:
@@ -99,7 +99,7 @@ export const artistData = [
     nation: "/img/artwork/artist/nation/KR.png",
     born: 0,
     logoImgUrl: "/img/artwork/artist/gy/gyLogo.png",
-    Instagram: "gyung_studio",
+    Instagram: ["gyung_studio"],
     WebSite: "",
     Email: "gyung_studio@naver.com",
     scriptKor:
@@ -122,7 +122,7 @@ export const artistData = [
     nation: "/img/artwork/artist/nation/KR.png",
     born: 0,
     logoImgUrl: "/img/artwork/artist/heeLogo.jpg",
-    Instagram: "heeeesoo_",
+    Instagram: ["heeeesoo_"],
     WebSite: "www.behance.net/heeeesoo_",
     Email: "Heesookim501@gmail.com",
     scriptKor:
@@ -140,7 +140,7 @@ export const artistData = [
     nation: "/img/artwork/artist/nation/KR.png",
     born: 0,
     logoImgUrl: "/img/artwork/artist/yul/yulLogo.jpg",
-    Instagram: "yulri.kr",
+    Instagram: ["yulri.kr"],
     WebSite: "linktr.ee/yulri.kr",
     Email: "yul@yy-graphics.com",
     scriptKor:
@@ -163,7 +163,7 @@ export const artistData = [
     nation: "/img/artwork/artist/nation/KR.png",
     born: 0,
     logoImgUrl: "/img/artwork/artist/kwLogo.jpg",
-    Instagram: "kwon___a",
+    Instagram: ["kwon___a"],
     WebSite: "",
     Email: "chosk1992@naver.com",
     scriptKor: "",

@@ -94,7 +94,10 @@
       .article_content {
         .camp_artwork_img {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+          grid-template-columns: repeat(
+            auto-fill,
+            minmax(400px, 1fr)
+          );
           grid-template-rows: repeat(auto-fill, minmax(400px, 1fr));
           img {
             object-fit: contain;
@@ -472,7 +475,10 @@
             display: grid;
             margin: 0 auto;
             max-width: 85%;
-            grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+            grid-template-columns: repeat(
+              auto-fill,
+              minmax(315px, 1fr)
+            );
             grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
             > div {
               height: 300px;
@@ -489,10 +495,13 @@
       }
     }
     .art_modal_grid.artistType.second_Page {
-      grid-template-rows: 5rem 68rem 3rem;
+      grid-template-rows: 5rem 1fr 3rem;
       .art_modal_article {
         .artist_imgs {
-          grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+          grid-template-columns: repeat(
+            auto-fill,
+            minmax(340px, 1fr)
+          );
         }
         .article_content {
           display: flex;
@@ -524,11 +533,21 @@
             .artist_short_info {
               gap: 0.5rem;
               h2 {
-                font-size: 1.5rem;
+                font-size: 1rem;
+                letter-spacing: -0.1rem;
+              }
+              .insta_container {
+                display: flex;
+                flex-direction: column;
               }
               a {
-                font-size: 1.1rem;
+                color: darkslateblue;
+                font-size: 1rem;
                 flex-grow: unset;
+                &:hover {
+                  -webkit-text-stroke: 1px var(--cl-main-font);
+                  color: transparent;
+                }
               }
             }
           }
@@ -584,6 +603,33 @@
 
       .art_modal_article {
         .article_content.vertical_half {
+          .artwork_script {
+            // p {
+            //   margin: 0 auto;
+            //   width: 18rem;
+            // }
+            .artist_short_info {
+              // gap: 0.5rem;
+              h2 {
+                font-size: 1rem;
+                // letter-spacing: -0.1rem;
+              }
+              .insta_container {
+                // display: flex;
+                // flex-direction: column;
+              }
+              a {
+                // color: darkslateblue;
+                font-size: 1rem;
+                // flex-grow: unset;
+                // &:hover {
+                //   -webkit-text-stroke: 1px var(--cl-main-font);
+                //   color: transparent;
+                // }
+              }
+            }
+          }
+
           .artist_artwork_img {
             img {
               width: 270px;

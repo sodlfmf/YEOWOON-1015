@@ -44,12 +44,19 @@ const ArtistContent = ({ ...item }) => {
                   alt={"nation"}
                   style={{}}
                 />
-                <Link
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={`http://instagram.com/${item.Instagram}`}>
-                  <span>instagram.com/{item.Instagram}</span>
-                </Link>
+                <label className="insta_container">
+                  {item.Instagram.map((insta: string, i: number) => {
+                    return (
+                      <Link
+                        key={i}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={`http://instagram.com/${item.Instagram}`}>
+                        <span>@{insta}</span>
+                      </Link>
+                    );
+                  })}
+                </label>
               </article>
             ) : null}
 
@@ -74,7 +81,12 @@ const ArtistContent = ({ ...item }) => {
         </div>
       ) : (
         <>
-          <video className="artist_video" loop muted autoPlay playsInline>
+          <video
+            className="artist_video"
+            loop
+            muted
+            autoPlay
+            playsInline>
             <source src={`${item.video}`} type="video/mp4" />
           </video>
         </>
