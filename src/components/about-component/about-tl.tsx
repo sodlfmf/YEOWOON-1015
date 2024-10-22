@@ -53,17 +53,17 @@ const AboutTl = () => {
         .to([imgs[0], nav[0]], { duration: 1, opacity: 0 }, "<1")
         .to(".year0", { duration: 1, rotateX: -90 }, "<")
         .to([imgs[1], nav[1]], { duration: 2, opacity: 1 })
-        .to(imgR[1], { duration: 3, top: "5rem", left: "8rem" })
+        .to(imgR[1], { duration: 3, top: "3rem", left: "5rem" })
         .to(".year1", { duration: 1, rotateX: 0 }, "<")
         .to([imgs[1], nav[1]], { duration: 1, opacity: 0 })
         .to(".year1", { duration: 1, rotateX: -90 }, "<")
         .to([imgs[2], nav[2]], { duration: 2, opacity: 1 })
-        .to(imgR[2], { duration: 3, top: "2rem", left: "5rem" })
+        .to(imgR[2], { duration: 3, top: "3rem", left: "5rem" })
         .to(".year2", { duration: 1, rotateX: 0 }, "<")
         .to([imgs[2], nav[2]], { duration: 1, opacity: 0 })
         .to(".year2", { duration: 1, rotateX: -90 }, "<")
         .to([imgs[3], nav[3]], { duration: 1, opacity: 1 })
-        .to(imgR[3], { duration: 3, top: "1rem", left: "7rem" })
+        .to(imgR[3], { duration: 3, top: "3rem", left: "5rem" })
         .to(".year3", { duration: 1, rotateX: 0 }, "<");
       // .to(imgs[3], { duration: 1, opacity: 0 });
 
@@ -125,7 +125,7 @@ const AboutTl = () => {
               <div className="imgLR" key={i}>
                 <Image
                   className="atl_l"
-                  src={`${l}`}
+                  src={`/img/about/tl/tl-r1.jpg`}
                   width={660}
                   height={680}
                   style={{}}
