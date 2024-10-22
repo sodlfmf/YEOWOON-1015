@@ -1,7 +1,25 @@
+"use client";
+
 import Image from "next/image";
 import "./content-artist.scss";
+import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const ArtistContent = ({ ...item }) => {
+  const [width, setWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
+
+  const handleResize = () => {
+    setWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       {item.isSecondPage === false ? (
@@ -16,7 +34,26 @@ const ArtistContent = ({ ...item }) => {
             />
           </figure>
           <label className="artwork_script">
-            <p>{item.scriptKor}</p>
+            {width <= 1080 ? (
+              <article className="artist_short_info">
+                <h2>{item.artist}</h2>
+                <Image
+                  src={`${item.nation}`}
+                  width={200}
+                  height={200}
+                  alt={"nation"}
+                  style={{}}
+                />
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={`http://instagram.com/${item.Instagram}`}>
+                  <span>instagram.com/{item.Instagram}</span>
+                </Link>
+              </article>
+            ) : null}
+
+            <p>{item.scriptEng}</p>
           </label>
         </>
       ) : item.video === "" ? (
@@ -37,12 +74,7 @@ const ArtistContent = ({ ...item }) => {
         </div>
       ) : (
         <>
-          <video
-            className="artist_video"
-            loop
-            muted
-            autoPlay
-            playsInline>
+          <video className="artist_video" loop muted autoPlay playsInline>
             <source src={`${item.video}`} type="video/mp4" />
           </video>
         </>

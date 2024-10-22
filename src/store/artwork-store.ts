@@ -40,6 +40,7 @@ export const createArtworkStore = create<ArtworkSelectType>((set) => ({
     {
       id: 0,
       artist: "",
+      nation: "",
       born: 0,
       logoImgUrl: "",
       Instagram: "",
@@ -57,7 +58,9 @@ export const createArtworkStore = create<ArtworkSelectType>((set) => ({
   setCampaignSelect: (selection: number) => {
     set((state) => ({
       campaignSelect: selection,
-      selectedCampaignData: campaignData.filter(({ id }) => id === selection),
+      selectedCampaignData: campaignData.filter(
+        ({ id }) => id === selection
+      ),
       isModalTypeArtist: false,
     }));
   },

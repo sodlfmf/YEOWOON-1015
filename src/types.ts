@@ -24,6 +24,7 @@ export interface artistImgType {
 export interface artistType {
   id: number;
   artist: string;
+  nation: string;
   born: number;
   logoImgUrl: string;
   Instagram: string | string[];

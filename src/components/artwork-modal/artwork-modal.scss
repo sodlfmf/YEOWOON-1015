@@ -41,7 +41,7 @@
   height: 100%;
   padding: 0;
   border-radius: 20px;
-  background-color: var(--cl-main-font);
+  background-color: var(--cl-art-modal);
   z-index: 2;
 
   .art_modal_grid.no_aside {
@@ -94,10 +94,7 @@
       .article_content {
         .camp_artwork_img {
           display: grid;
-          grid-template-columns: repeat(
-            auto-fill,
-            minmax(400px, 1fr)
-          );
+          grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
           grid-template-rows: repeat(auto-fill, minmax(400px, 1fr));
           img {
             object-fit: contain;
@@ -229,7 +226,6 @@
   .art_modal_container {
     .art_modal_article {
       .article_content.vertical_half {
-        // display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 600px 3rem;
         gap: 1rem;
@@ -238,13 +234,8 @@
           display: flex;
           justify-content: center;
           object-fit: contain;
-          // grid-column: 1 / 2;
-          grid-row: 1 / 2;
-          // width: 200px;
-          // height: 150px;
 
-          // display: flex;
-          // justify-content: center;
+          grid-row: 1 / 2;
         }
         .artwork_script {
           grid-column: 1 / 2;
@@ -293,8 +284,7 @@
     .art_modal_grid.artistType.second_Page {
       overflow-y: scroll;
       -webkit-overflow-scrolling: touch;
-
-      grid-template-rows: 5rem 60rem 3rem;
+      grid-template-rows: 5rem 86rem 3rem;
       .art_modal_article {
         .article_content {
           grid-row: 1 / 2;
@@ -304,44 +294,50 @@
 
     .art_modal_grid.artistType {
       grid-template-columns: 1fr;
-      grid-template-rows: 5rem 30rem 10rem;
+      grid-template-rows: 2rem 47rem;
+      place-items: center;
 
       .art_modal_aside.no_aside {
         display: none;
       }
       .art_modal_aside {
+        display: none;
         width: 100%;
-        grid-row: 3 / 4;
+        grid-row: unset;
         figure {
           display: none;
           margin-bottom: unset;
         }
 
         .artist_info {
+          display: inline-flex;
+          flex-direction: row;
           padding-top: 0.5rem;
           width: 100%;
-          position: relative;
-          text-align: center;
-        }
-        .artsist_address {
-          width: 100%;
-          display: flex;
-          align-items: center;
 
           > * {
-            width: 58.5%;
+          }
+        }
+        .artsist_address {
+          display: none;
+          width: 100%;
+          // display: flex;
+
+          > * {
           }
         }
       }
 
       .art_modal_header {
         grid-column: 1 / 2;
+
         h2 {
           display: none;
         }
       }
       .art_modal_article {
         grid-column: 1 / 2;
+
         grid-template-rows: 1fr;
         .article_header {
           display: none;
@@ -349,15 +345,41 @@
           grid-row: unset;
         }
         .article_content.vertical_half {
+          text-align: unset;
           display: unset;
-          grid-row: 1 / 2;
+          grid-row: 2 / 3;
           .artist_artwork_img {
             width: 380px;
             margin: 0 auto;
           }
         }
         .artwork_script {
-          display: none;
+          // display: none;
+          p {
+            width: 23.8rem;
+          }
+          .artist_short_info {
+            margin: 1rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            position: relative;
+            gap: 2rem;
+            h2 {
+              font-size: 2.2rem;
+            }
+            img {
+              width: 40px;
+              height: 25px;
+            }
+            a {
+              bottom: 0;
+              font-size: 1.2rem;
+              flex-grow: 2;
+              color: black;
+              cursor: pointer;
+            }
+          }
         }
       }
 
@@ -450,10 +472,7 @@
             display: grid;
             margin: 0 auto;
             max-width: 85%;
-            grid-template-columns: repeat(
-              auto-fill,
-              minmax(315px, 1fr)
-            );
+            grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
             grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
             > div {
               height: 300px;
@@ -470,12 +489,10 @@
       }
     }
     .art_modal_grid.artistType.second_Page {
+      grid-template-rows: 5rem 68rem 3rem;
       .art_modal_article {
         .artist_imgs {
-          grid-template-columns: repeat(
-            auto-fill,
-            minmax(340px, 1fr)
-          );
+          grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
         }
         .article_content {
           display: flex;
@@ -487,7 +504,7 @@
     .art_modal_grid.artistType {
       padding: unset;
       grid-template-columns: 1fr;
-      grid-template-rows: 5rem 18rem 18rem;
+      grid-template-rows: 5rem 36rem 18rem;
 
       .art_modal_header {
         .art_modal_close_Btn {
@@ -498,8 +515,30 @@
       .art_modal_article {
         .article_content.vertical_half {
           padding: unset;
+
+          .artwork_script {
+            p {
+              margin: 0 auto;
+              width: 18rem;
+            }
+            .artist_short_info {
+              gap: 0.5rem;
+              h2 {
+                font-size: 1.5rem;
+              }
+              a {
+                font-size: 1.1rem;
+                flex-grow: unset;
+              }
+            }
+          }
+
           .artist_artwork_img {
             width: 288px;
+            img {
+              width: 270px;
+              height: 330px;
+            }
           }
         }
       }
@@ -507,17 +546,6 @@
       .art_modal_aside {
         figure {
           margin-bottom: unset;
-        }
-      }
-
-      .art_modal_article {
-        .article_content.vertical_half {
-          .artist_artwork_img {
-            img {
-              width: 270px;
-              height: 330px;
-            }
-          }
         }
       }
     }
@@ -541,7 +569,7 @@
     }
 
     .art_modal_grid.artistType {
-      grid-template-rows: 3rem 14rem 18rem;
+      grid-template-rows: 3rem 33rem 18rem;
 
       .art_modal_header {
         .art_modal_close_Btn {
