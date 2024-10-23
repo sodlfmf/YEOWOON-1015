@@ -73,8 +73,8 @@ export default function Home() {
   }, [aboutY]);
 
   return (
-    <>
-      <article
+    <article className="main_container">
+      <section
         className={`main_bg ${KarlaLight.className}`}
         onTouchMove={(e) => {
           if (isModalOpen === true) return;
@@ -131,7 +131,7 @@ export default function Home() {
           />
         </svg>
         <MenuModal />
-      </article>
+      </section>
       {aboutY === true && (
         <article className="main_about_container">
           <AboutYEOWOON />
@@ -146,6 +146,6 @@ export default function Home() {
           <MainFloatingBar />
         </article>
       )}
-    </>
+    </article>
   );
 }
