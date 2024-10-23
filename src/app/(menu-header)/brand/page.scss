@@ -1,12 +1,13 @@
 .brand {
-  top:10vh;
+  top:0;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   min-height: 600px;
   display: flex;
   margin: 0 auto;
   flex-grow: 1;
   justify-content: space-evenly;
+  position: fixed;
 
   p {
     width: 100%;
@@ -29,9 +30,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 80%;
-  width: 70%;
-  top:0;
+  height: 100%;
+  width: 100%;
 
   > img {
     width: 100%;
@@ -43,11 +43,21 @@
   }
   > div {
     position: absolute;
-    width: 100%;
+    width: 70%;
     align-content: center;
-    top:45%;
+    top:35%;
     img{
       height: auto;
+    }
+    > div{
+      padding: 1rem;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      font-size: 2rem;
+    }
+    p{
+      font-size: 4rem;
     }
   }
 }
@@ -79,6 +89,7 @@
   width: 100%;
   justify-content: space-around;
   flex-direction: column;
+  align-items: center;
   font-size: 3rem;
   min-width: 600px;
   padding-bottom: 1rem;
@@ -86,16 +97,23 @@
   z-index: 2;
 
   div {
-    padding-top: 1rem;
+    padding: 2rem;
     display: flex;
     width: 100%;
     justify-content: center;
+    flex-direction: column;
+    align-items: center 
   }
 
   img {
     width: 60px;
     height: 60px;
     margin: 0px 4rem;
+  }
+  a{
+    padding: 1rem;  
+    width: 50%;
+    text-align: center;
   }
 }
 
@@ -155,21 +173,23 @@
 
 @media screen and (max-width: 1080px) {
   .brand {
-    min-height: 1000px;
+    min-height: 400px;
     flex-direction: column;
   }
 
   .brand_container{
     width: 100%;
-    height: 50%;
+    height: 100%;
+    >div{
+      font-size: 2.1rem;
+    }
   }
   .brand_img {
-    height: 70%;
     >img {
       min-height: 200px;
     }
     >div{
-      width: 80%;
+      width: 60%;
       top: 35%
     }
   }
@@ -192,18 +212,23 @@
 
   .brand_container {
     width: 100%;
-    height: 45%;
   }
 
   .brand_img {
-    top:5%;
+    p{
+      font-size: 2.1rem;
+      padding: 1rem;
+    }
     img {
       width: 100%;
     }
 
-    div {
+    > div {
       width: 80%;
       bottom: 17.1rem;
+      p{
+        font-size: 2rem;
+      }
     }
   }
   .brand_link {
@@ -211,8 +236,16 @@
     min-width: 300px;
     padding-bottom: 0.5rem;
     height: auto;
+    font-size: 2rem;
     img{
       margin: 0px 3rem;
+    }
+    >div{
+      width: 60%;
+      top: 25%
+    }
+    a{
+      padding: 0.3rem;
     }
 
   }
@@ -264,7 +297,7 @@
 
 // / 스마트폰 모바일(세로) /
 
-@media only screen and (min-device-width: 360px) and (max-device-width: 479px) {
+@media only screen and (min-device-width: 360px) and (max-device-width: 768px) {
   .brand_container{
     >div:nth-child(2){
       align-content: center;
@@ -278,6 +311,11 @@
       width: 50px;  
       height: 50px;
     }
+  }
+  .brand_img{
+    >div{
+      top: 25%;
+  }
   }
 }
 

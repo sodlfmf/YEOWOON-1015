@@ -4,7 +4,8 @@
   align-items: center;
   
   button , textarea, input{
-    font-family: var(--font-NotoSans-Bold)
+    font-family: var(--font-NotoSans-Bold);
+    font-size: 1rem;
   }
 
   h1 {
@@ -35,6 +36,9 @@
   max-width: 800px;
   position: relative;
   padding-bottom: 3rem;
+  h1{
+    font-size: 5rem;
+  }
 
   input, textarea {
     padding: 0.5rem;
@@ -58,7 +62,9 @@
     font-size: 2.2rem;
     padding: 1.2rem;
     border-bottom: 0.1rem solid white;
-
+    p{
+      font-size: 2.1rem;
+    }
     &:hover {
       cursor: pointer;
     }
@@ -91,7 +97,7 @@ input:autofill:active {
 
 .submit_message{
   position: absolute;
-  font-size: 2rem;
+  font-size: 4rem;
   margin-top: 2rem;
   text-align: center;
   perspective:400px;
@@ -99,6 +105,11 @@ input:autofill:active {
   bottom: 2rem;
 }
 
+.sandMail{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .contact_link {
   width: 50%;
@@ -113,9 +124,12 @@ input:autofill:active {
     padding: 2rem 0rem;
     text-align: center;
   }
-
   a, svg {
     color: var(--cl-main-font);
+    display: block;
+  }
+  a,p{
+    padding: 0.2rem;
   }
 }
 
@@ -142,9 +156,6 @@ input:autofill:active {
     margin: 1rem;
   }
 
-  b{
-    font-family: var(--font-NotoSans-black);
-  }
 }
 
 .contact_link > div:nth-child(1) {

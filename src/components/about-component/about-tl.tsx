@@ -116,6 +116,13 @@ const AboutTl = () => {
     return navis;
   };
 
+  // const atl_attends= document.getElementById("atl_attends")
+  // atl_attends?.addEventListener('scroll',function(){
+  //   var scrollbar = document.getElementById("scrollbar")
+
+  //   // var pagescroll = atl_attends.scrollX || atl_attends.page
+  // })
+
   return (
     <div className="atl_container" ref={tlRef}>
       <div className="atl_contents">
@@ -176,7 +183,7 @@ const AboutTl = () => {
         </div>
       </div>
       <div className="atl_end"></div>
-      <div className="widthscroll"><div className="scrollbar"></div></div>
+      {/* <div className="widthscroll"><div id="scrollbar"></div></div> */}
     </div>
   );
 };

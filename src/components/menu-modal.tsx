@@ -8,6 +8,7 @@ import { archiveSubMenu, headerMenu } from "@/mock/data";
 import { gsap } from "gsap";
 import { usePathname, useRouter } from "next/navigation";
 import { useGSAP } from "@gsap/react";
+import { notoSansExtraBold } from "@/fonts";
 
 const MenuModal = () => {
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -89,7 +90,7 @@ const MenuModal = () => {
   return createPortal(
     <dialog
       onClose={() => setIsModalOpen(false)}
-      className="modal_dialog"
+      className={`modal_dialog ${notoSansExtraBold.className}`}
       ref={dialogRef}>
       <div className="modal_close_Btn">
         <button

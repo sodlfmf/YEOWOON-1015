@@ -2,9 +2,12 @@ import brand from "@/mock/brand.json";
 import Image from "next/image";
 import "./page.scss";
 import MenuModal from "@/components/menu-modal";
+import { KarlaMedium, kottaOne,notoSansBlack } from "@/fonts";
 const Brand = () => {
+  const fonts = [kottaOne,notoSansBlack]
+  const fontClassname = fonts.map((font) => font.variable).join(" ")
   return (
-    <div className="brand">
+    <div className={`brand ${fontClassname}`}>
       {brand.map((item) => {
         return (
           <div key={item.id} className="brand_container">
@@ -16,6 +19,9 @@ const Brand = () => {
                 height={1720}
               />
               <div>
+                  <div className={item.font}>
+                    <p>{item.determination}</p>
+                  </div>
                 <Image
                   src={item.logo}
                   alt={item.id}
@@ -24,23 +30,12 @@ const Brand = () => {
               </div>
             </div>
             <div className="brand_link">
-              <div className={item.font}>
-                <p>{item.determination}</p>
-              </div>
-              <div>
-                <a href={item.webpage}>
-                  <Image
-                    src="/img/brandWeb.png"
-                    alt="wed"
-                    width={80}
-                    height={80}></Image>
-                </a>
+              <div className={KarlaMedium.className}>
                 <a href={item.instagram}>
-                  <Image
-                    src="/img/brandInsta.png"
-                    alt="insta"
-                    width={80}
-                    height={80}></Image>
+                  INSTA
+                </a>
+                <a href={item.webpage}>
+                  SHOP
                 </a>
               </div>
             </div>

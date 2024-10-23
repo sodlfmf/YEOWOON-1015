@@ -15,7 +15,7 @@ const AboutTlItem = () => {
   });
 
   return (
-    <div className="atl_attends" ref={attendRef}>
+    <div id="atl_attends" className="atl_attends" ref={attendRef}>
       {tlScript.map(({ year, attends }, i) => {
         return (
           <div className="atl_attend_item" key={i} id={`year${i}`}>

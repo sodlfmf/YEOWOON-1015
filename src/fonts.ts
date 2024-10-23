@@ -12,6 +12,12 @@ export const KarlaLight = localFont({
   weight: "100",
   display: "swap",
 });
+export const KarlaMedium = localFont({
+  src: "fonts/Karla-Medium.woff2",
+  variable: "--font-karla-medium",
+  weight: "100",
+  display: "swap",
+});
 
 export const notoSans = localFont({
   src: "fonts/NotoSans-Regular.woff2",
@@ -80,6 +86,7 @@ const fonts = [
   trirong,
   kottaOne,
   karlaBold,
+  KarlaMedium
 ];
 
 export const fontClassname = fonts.map((font) => font.variable).join(" ");
