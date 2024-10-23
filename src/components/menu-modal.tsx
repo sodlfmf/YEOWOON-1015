@@ -19,12 +19,20 @@ const MenuModal = () => {
   useEffect(() => {
     if (isModalOpen === true) {
       document.body.style.overflowY = "hidden";
-      gsap.to(".main_container", {
-        position: "fixed",
-        height: "70%",
-        width: "100%",
-      });
-      // gsap.to(".main_about_container", { display: "none" });
+      if (pathname === "") {
+        gsap.to(".main_container", {
+          position: "fixed",
+          height: "90dvh",
+          width: "100dvw",
+        });
+      }
+      if (pathname === "archive/artwork") {
+        gsap.to(".artwork_container", {
+          position: "fixed",
+          height: "90dvh",
+          width: "100dvw",
+        });
+      }
     } else if (isModalOpen === false) {
       document.body.style.overflowY = "";
       gsap.to(".main_container", {
@@ -32,7 +40,20 @@ const MenuModal = () => {
         height: "",
         width: "",
       });
-      // gsap.to(".main_about_container", { display: "flex" });
+      if (pathname === "") {
+        gsap.to(".main_container", {
+          position: "",
+          height: "",
+          width: "",
+        });
+      }
+      if (pathname === "archive/artwork") {
+        gsap.to(".artwork_container", {
+          position: "",
+          height: "",
+          width: "",
+        });
+      }
     }
   }, [isModalOpen]);
 
