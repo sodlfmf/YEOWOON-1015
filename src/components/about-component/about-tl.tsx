@@ -176,6 +176,7 @@ const AboutTl = () => {
         </div>
       </div>
       <div className="atl_end"></div>
+      <div className="widthscroll"><div className="scrollbar"></div></div>
     </div>
   );
 };

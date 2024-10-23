@@ -14,6 +14,7 @@ import ArtistImgItem from "@/components/artwork-component/artist-img-Item";
 import { useEffect, useRef, useState } from "react";
 
 import { createArtworkModalStore } from "@/store/modal-store";
+import { notoSansBlack } from "@/fonts";
 
 const Artwork = () => {
   const campTlRef = useRef<GSAPTimeline>();
@@ -98,7 +99,7 @@ const Artwork = () => {
 
   return (
     <section className="artwork_container">
-      <h1 className="notoblack">ART WORK</h1>
+      <h1 className={notoSansBlack.className}>ART WORK</h1>
 
       <main className="artwork_grid">
         <article className="camp item_container">

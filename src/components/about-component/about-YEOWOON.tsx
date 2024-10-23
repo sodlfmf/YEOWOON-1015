@@ -5,6 +5,7 @@ import "./about-YEOWOON.scss";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import { notoSansBlack, notoSansExtraBold } from "@/fonts";
 
 gsap.registerPlugin(useGSAP, MotionPathPlugin);
 
@@ -47,10 +48,10 @@ const AboutYEOWOON = () => {
         <video loop muted autoPlay playsInline>
           <source src="/video/aboutSilver.mp4" type="video/mp4" />
         </video>
-        <h4 className="notoblack">FIND YOUR STYLE WITH YEOWOON WHOEVER YOU ARE</h4>
+        <h4 className={notoSansBlack.className}>FIND YOUR STYLE WITH YEOWOON WHOEVER YOU ARE</h4>
       </div>
       <div className="ay_subtitle">
-        <h3 className="notoExbold">About YEOWOON</h3>
+        <h3 className={notoSansExtraBold.className}>About YEOWOON</h3>
         <p>
           The present is all we have. While we cannot alter the past
           nor foresee the future, we can shape our existence
@@ -84,7 +85,7 @@ const AboutYEOWOON = () => {
           />
 
           <div className="ay_rep_script">
-            <h4 className="notoExbold">
+            <h4 className={notoSansExtraBold.className}>
               Jung
               <br /> Soonhee
             </h4>

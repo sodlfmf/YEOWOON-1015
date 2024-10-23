@@ -8,6 +8,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { createModalStore } from "@/store/modal-store";
 import { useState } from "react";
+import { notoSansBlack } from "@/fonts";
 
 const MainHeader = () => {
   const pathname = usePathname().replace("/", "");
@@ -15,7 +16,7 @@ const MainHeader = () => {
   const [active_sub, setActive_sub] = useState(false);
 
   return (
-    <header className="header notoblack">
+    <header className={`header ${notoSansBlack.className}`}>
       <div className="bar_container">
         <svg
           onClick={() => setIsModalOpen(true)}

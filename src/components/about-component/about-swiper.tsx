@@ -10,6 +10,7 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import Script from "../script-component";
 import Image from "next/image";
+import { notoSansBlack } from "@/fonts";
 
 const AboutSwiper = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
@@ -50,7 +51,7 @@ const AboutSwiper = () => {
           return (
             <SwiperSlide key={id} className="about_swiperSlide">
               <div
-                className="swiperImg notoblack"
+                className={`swiperImg ${notoSansBlack.className}`}
                 // style={{
                 //   backgroundImage: `url(${ImgUrl})`,
                 // }}>

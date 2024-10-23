@@ -33,7 +33,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="kr" className={`${notoSans.className} ${fontClassname}`}>
+    <html lang="kr" className={`${notoSans.className} `}>
       <body>
         <div className="container">
           <MainHeader />

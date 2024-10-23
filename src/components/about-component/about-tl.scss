@@ -141,6 +141,14 @@
   border-radius: 90px;
   background-color: var(--cl-main-font);
 }
+.widthscroll{
+  width: 80%;
+  height: 1rem;
+  position: absolute;
+  background-color: white;
+  border-radius: 50px;
+  
+}
 
 @media screen and (max-width: 1440px) {
   .atl_img {

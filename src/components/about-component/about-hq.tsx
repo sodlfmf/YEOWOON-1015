@@ -7,6 +7,7 @@ import Image from "next/image";
 import AboutHqFooter from "./about-hq-footer";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { notoSansBold } from "@/fonts";
 
 const AboutHQ = () => {
   const [width, setWidth] = useState(
@@ -28,7 +29,7 @@ const AboutHQ = () => {
     <div
       className={`ahq_container ${
         pathname !== "about" && width <= 1080 ? `mobile_footer` : ""
-      } notobold`}>
+      } ${notoSansBold.className}`}>
       <div className="ahq_title">Head Quarters</div>
       <div className="ahq_content">
         <div className="ahq_img">

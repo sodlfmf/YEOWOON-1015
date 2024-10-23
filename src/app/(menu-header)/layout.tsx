@@ -5,7 +5,7 @@ import AboutArchiveContactHeader from "@/components/menu-header";
 import { Metadata } from "next";
 import Script from "next/script";
 import { Karla,notoSans } from "@/fonts";
-import { fontClassname} from "@/fonts";
+// import { fontClassname} from "@/fonts";
 
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="kr" className={`${notoSans.className} ${fontClassname}`}>
+    <html lang="kr" className={`${notoSans.className} `}>
       <body>
         <div className="container">
           <AboutArchiveContactHeader />
