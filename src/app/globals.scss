@@ -7,6 +7,9 @@
   --cl-aboutSwiper: #979797;
   --cl-archiveSwiper-Inactive: #878787;
 
+  //스크롤 이벤트 전파 방지 + ios 바운스 스크롤(리프레쉬) 효과 방지
+  overscroll-behavior: none;
+
   // 폰트 최적화
   font-synthesis: none;
   -webkit-text-size-adjust: 100%;
