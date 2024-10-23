@@ -17,7 +17,6 @@ import { useGSAP } from "@gsap/react";
 import { createModalStore } from "@/store/modal-store";
 import { Karla, KarlaLight } from "@/fonts";
 
-
 export default function Home() {
   gsap.registerPlugin(gsap);
   gsap.registerPlugin(ScrollTrigger);
@@ -75,7 +74,7 @@ export default function Home() {
 
   return (
     <>
-      <div
+      <article
         className={`main_bg ${KarlaLight.className}`}
         onTouchMove={(e) => {
           if (isModalOpen === true) return;
@@ -108,9 +107,9 @@ export default function Home() {
           </div>
           <div className="script_2">
             <p>
-              We create jewelry that lasts a long time, like a
-              yeowoon, <br />a feeling people can look back on for as
-              long as they want
+              We create jewelry that lasts a long time, like a yeowoon,{" "}
+              <br />a feeling people can look back on for as long as they
+              want
             </p>
           </div>
         </section>
@@ -132,9 +131,9 @@ export default function Home() {
           />
         </svg>
         <MenuModal />
-      </div>
+      </article>
       {aboutY === true && (
-        <div className="main_about_container">
+        <article className="main_about_container">
           <AboutYEOWOON />
           {atl === true && (
             <>
@@ -145,7 +144,7 @@ export default function Home() {
             </>
           )}
           <MainFloatingBar />
-        </div>
+        </article>
       )}
     </>
   );

@@ -41,16 +41,20 @@
   .archive_menu {
   }
 
-  .archive_sub_li {
-    margin: 0 auto;
-    width: 15rem;
-    line-height: -2px;
-    background-color: var(--cl-about-bg);
-    a {
-      font-size: 2rem;
+  .archive_sub_ul {
+    .archive_sub_li {
+      margin: 0 auto;
+      width: 15rem;
+      font-size: 3rem;
+      line-height: 1.1px;
+      // background-color: var(--cl-about-bg);
+
+      a {
+        font-size: 1rem;
+      }
+      display: none;
+      height: 0;
     }
-    display: none;
-    height: 0;
   }
 
   .modal_close_Btn {
@@ -74,14 +78,14 @@
     width: 100%;
     padding: 0;
     transform: translateX(-1px);
-    // ul {
-    //   li {
-    //     a,
-    //     .archive_menu {
-    //       font-size: 3rem;
-    //     }
-    //   }
-    // }
+    ul {
+      li {
+        a,
+        .archive_menu {
+          font-size: 2.5rem;
+        }
+      }
+    }
 
     .modal_close_Btn {
       left: 86.5%;

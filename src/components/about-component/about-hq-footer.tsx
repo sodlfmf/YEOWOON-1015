@@ -57,7 +57,7 @@ const DefaultAhqFooter = () => {
         <p>Go to Archive</p>
       </Link>
       <svg
-        width="195"
+        width="120"
         height="16"
         viewBox="0 0 195 16"
         fill="none"
@@ -79,7 +79,7 @@ const MobileMainAhqFooter = () => {
         <p>WITH US</p>
       </Link>
       <svg
-        width="195"
+        width="120"
         height="16"
         viewBox="0 0 195 16"
         fill="none"

@@ -71,6 +71,7 @@ ul {
 html,
 body,
 p {
+  font-size: 12px;
   margin: 0px;
   padding: 0px;
 }
@@ -88,7 +89,7 @@ select {
   -moz-appearance: none;
   appearance: none;
   border-radius: 0;
-  font-size: 16px;
+  font-size: 12px;
   border: 0;
 }
 
@@ -109,36 +110,36 @@ button {
   white-space: nowrap;
 }
 
-.karla{
+.karla {
   font-family: var(--font-karla-variable);
 }
-.karlaLight{
+.karlaLight {
   font-family: var(--font-karla-light);
 }
-.karlaBold{
+.karlaBold {
   font-family: var(--font-Karla-Bold);
 }
-.notosans{
+.notosans {
   font-family: var(--font-NotoSans-Regular);
 }
-.notoblack{
+.notoblack {
   font-family: var(--font-NotoSans-black);
 }
-.notobold{
+.notobold {
   font-family: var(--font-NotoSans-Bold);
 }
-.notosembold{
+.notosembold {
   font-family: var(--font-NotoSans-semiBold);
 }
-.notoExbold{
+.notoExbold {
   font-family: var(--font-NotoSans-ExtraBold);
 }
-.notomediun{
+.notomediun {
   font-family: var(--font-NotoSans-mediun);
 }
-.trirong{
+.trirong {
   font-family: var(--font-Trirong-regular);
 }
-.kotta{
+.kotta {
   font-family: var(--font-KottaOne-regular);
 }

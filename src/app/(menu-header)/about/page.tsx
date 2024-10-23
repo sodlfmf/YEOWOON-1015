@@ -16,10 +16,10 @@ gsap.registerPlugin(gsap);
 
 export const AboutTeam = () => {
   return (
-    <div className="at_container">
-      <div className="at_title">Our Team</div>
+    <article className="at_container">
+      <header className="at_title">Our Team</header>
       <AboutTeamItem />
-    </div>
+    </article>
   );
 };
 
@@ -28,17 +28,15 @@ const About = () => {
     commonLenis();
   });
 
-  useGSAP(() => {});
-
   return (
-    <div className="about_container">
+    <article className="about_container">
       <MenuModal />
       <AboutYEOWOON />
       <AboutTl />
       <AboutTeam />
       <AboutSwiper />
       <AboutHQ />
-    </div>
+    </article>
   );
 };
 

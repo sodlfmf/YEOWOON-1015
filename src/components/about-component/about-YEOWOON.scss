@@ -42,8 +42,8 @@
   text-align: center;
   padding-bottom: 1.5rem;
 
-  h3 {
-    font-size: 3.7rem;
+  h2 {
+    font-size: 2.5rem;
     margin-bottom: 2rem;
   }
 
@@ -261,19 +261,19 @@
     }
 
     p {
-      font-size: 1.5rem;
-      letter-spacing: -0.08rem;
-      max-width: 25rem;
+      font-size: 1.25rem;
+      letter-spacing: -0.02rem;
+      max-width: 28rem;
     }
   }
 
   .ay_content {
-    padding-left: 1rem;
-    display: inline-block;
+    display: flex;
     overflow: unset;
     // margin: 0 auto;
 
     .ay_rep {
+      justify-content: center;
       Img {
         margin-right: 1.2rem;
         width: 170px;
@@ -291,12 +291,12 @@
   .ay_rep_script {
     bottom: 0.7rem;
     h4 {
-      font-size: 2rem;
+      font-size: 1.85rem;
     }
 
     p {
       max-width: 13rem;
-      font-size: 1.1rem;
+      font-size: 1.25rem;
     }
   }
 }
@@ -333,16 +333,17 @@
     p {
       font-size: 1.3rem;
       letter-spacing: -0.08rem;
-      max-width: 20rem;
+      max-width: 25rem;
     }
   }
   .ay_content {
     padding-left: 1rem;
     display: inline-block;
     overflow: unset;
-    // margin: 0 auto;
 
     .ay_rep {
+      display: flex;
+
       Img {
         margin-right: 1.2rem;
         width: 150px;

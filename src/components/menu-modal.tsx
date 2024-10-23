@@ -53,10 +53,18 @@ const MenuModal = () => {
 
     tl.set(".archive_sub_li", {
       display: "list-item",
-    }).to(".archive_sub_li", {
-      duration: 1,
-      height: "2.5rem",
-    });
+    })
+      .to(".archive_sub_ul", {
+        padding: "1rem",
+      })
+      .to(
+        ".archive_sub_li",
+        {
+          duration: 0.5,
+          height: "2rem",
+        },
+        "<"
+      );
   };
 
   useGSAP(() => {
@@ -68,12 +76,11 @@ const MenuModal = () => {
       }).from(
         ".modal_dialog .menu",
         {
-          delay: 0.3,
           duration: 1.5,
           opacity: 0,
-          stagger: { each: 0.2 },
+          stagger: { amount: 0.5 },
         },
-        "-=0.5"
+        "-=1"
       );
     }
   }, [isModalOpen]);
@@ -122,7 +129,6 @@ const MenuModal = () => {
                         <a
                           onClick={() => {
                             setIsModalOpen(false);
-
                             router.push(`/${link}/${sub}`);
                           }}>
                           {sub}

@@ -94,10 +94,7 @@
       .article_content {
         .camp_artwork_img {
           display: grid;
-          grid-template-columns: repeat(
-            auto-fill,
-            minmax(400px, 1fr)
-          );
+          grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
           grid-template-rows: repeat(auto-fill, minmax(400px, 1fr));
           img {
             object-fit: contain;
@@ -297,7 +294,7 @@
 
     .art_modal_grid.artistType {
       grid-template-columns: 1fr;
-      grid-template-rows: 2rem 47rem;
+      grid-template-rows: 2rem 77rem;
       place-items: center;
 
       .art_modal_aside.no_aside {
@@ -364,10 +361,10 @@
           .artist_short_info {
             margin: 1rem 0;
             display: flex;
-            justify-content: center;
+            justify-content: space-evenly;
             align-items: flex-end;
             position: relative;
-            gap: 2rem;
+            gap: 2.5rem;
             h2 {
               font-size: 2.2rem;
             }
@@ -378,7 +375,7 @@
             a {
               bottom: 0;
               font-size: 1.2rem;
-              flex-grow: 2;
+
               color: black;
               cursor: pointer;
             }
@@ -475,11 +472,8 @@
             display: grid;
             margin: 0 auto;
             max-width: 85%;
-            grid-template-columns: repeat(
-              auto-fill,
-              minmax(315px, 1fr)
-            );
-            grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+            grid-template-rows: repeat(auto-fill, minmax(210px, 1fr));
             > div {
               height: 300px;
               display: flex;
@@ -498,10 +492,7 @@
       grid-template-rows: 5rem 1fr 3rem;
       .art_modal_article {
         .artist_imgs {
-          grid-template-columns: repeat(
-            auto-fill,
-            minmax(340px, 1fr)
-          );
+          grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
         }
         .article_content {
           display: flex;
@@ -513,7 +504,7 @@
     .art_modal_grid.artistType {
       padding: unset;
       grid-template-columns: 1fr;
-      grid-template-rows: 5rem 36rem 18rem;
+      grid-template-rows: 5rem 58rem 18rem;
 
       .art_modal_header {
         .art_modal_close_Btn {
@@ -527,13 +518,14 @@
 
           .artwork_script {
             p {
+              font-size: 1.15rem;
               margin: 0 auto;
-              width: 18rem;
+              width: 25rem;
             }
             .artist_short_info {
               gap: 0.5rem;
               h2 {
-                font-size: 1rem;
+                font-size: 1.5rem;
                 letter-spacing: -0.1rem;
               }
               .insta_container {
@@ -542,7 +534,7 @@
               }
               a {
                 color: darkslateblue;
-                font-size: 1rem;
+                font-size: 1.25rem;
                 flex-grow: unset;
                 &:hover {
                   -webkit-text-stroke: 1px var(--cl-main-font);
@@ -588,7 +580,7 @@
     }
 
     .art_modal_grid.artistType {
-      grid-template-rows: 3rem 33rem 18rem;
+      grid-template-rows: 3rem 44rem 18rem;
 
       .art_modal_header {
         .art_modal_close_Btn {
@@ -604,28 +596,17 @@
       .art_modal_article {
         .article_content.vertical_half {
           .artwork_script {
-            // p {
-            //   margin: 0 auto;
-            //   width: 18rem;
-            // }
+            p {
+              width: 21rem;
+            }
             .artist_short_info {
-              // gap: 0.5rem;
               h2 {
-                font-size: 1rem;
-                // letter-spacing: -0.1rem;
+                font-size: 1.25rem;
               }
               .insta_container {
-                // display: flex;
-                // flex-direction: column;
               }
               a {
-                // color: darkslateblue;
-                font-size: 1rem;
-                // flex-grow: unset;
-                // &:hover {
-                //   -webkit-text-stroke: 1px var(--cl-main-font);
-                //   color: transparent;
-                // }
+                font-size: 1.2rem;
               }
             }
           }
