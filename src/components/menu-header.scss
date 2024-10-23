@@ -46,6 +46,9 @@
         min-width: 273px;
         padding-right: 10rem;
       }
+      > li:nth-child(4) {
+        position: relative;
+      }
       > li:nth-child(n + 2) {
         display: flex;
         align-items: center;
@@ -77,6 +80,7 @@
     background-color: var(--cl-about-bg);
     text-transform: uppercase;
     position: absolute;
+    top: 3.5rem;
 
     li {
       text-align: center;
