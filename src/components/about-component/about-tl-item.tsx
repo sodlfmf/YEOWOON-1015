@@ -10,29 +10,27 @@ const AboutTlItem = () => {
   const attendRef = useRef<HTMLDivElement>(null);
   gsap.registerPlugin(gsap);
   gsap.registerPlugin(ScrollTrigger);
-  useGSAP(() => {
-    
-  });
+  useGSAP(() => {});
 
   return (
-    <div id="atl_attends" className="atl_attends" ref={attendRef}>
+    <section id="atl_attends" className="atl_attends" ref={attendRef}>
       {tlScript.map(({ year, attends }, i) => {
         return (
-          <div className="atl_attend_item" key={i} id={`year${i}`}>
+          <figure className="atl_attend_item" key={i} id={`year${i}`}>
             <h3 className={notoSansBold.className}>{year}</h3>
             {attends.map((item, i) => {
               return (
-                <div key={i}>
+                <label key={i}>
                   <p>
                     <Script param={item} />
                   </p>
-                </div>
+                </label>
               );
             })}
-          </div>
+          </figure>
         );
       })}
-    </div>
+    </section>
   );
 };
 

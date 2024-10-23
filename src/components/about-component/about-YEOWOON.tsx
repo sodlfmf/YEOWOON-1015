@@ -43,23 +43,25 @@ const AboutYEOWOON = () => {
   });
 
   return (
-    <div className="ay_container">
-      <div className="ay_title">
+    <article className="ay_container">
+      <header className="ay_title">
         <video loop muted autoPlay playsInline>
           <source src="/video/aboutSilver.mp4" type="video/mp4" />
         </video>
-        <h4 className={notoSansBlack.className}>FIND YOUR STYLE WITH YEOWOON WHOEVER YOU ARE</h4>
-      </div>
-      <div className="ay_subtitle">
+        <h4 className={notoSansBlack.className}>
+          FIND YOUR STYLE WITH YEOWOON WHOEVER YOU ARE
+        </h4>
+      </header>
+      <section className="ay_subtitle">
         <h3 className={notoSansExtraBold.className}>About YEOWOON</h3>
         <p className={Karla.className}>
-          The present is all we have. While we cannot alter the past
-          nor foresee the future, we can shape our existence
-          <br /> one stylish day at a time. A life illuminated by
-          daily elegance is a life beautifully lived.
+          The present is all we have. While we cannot alter the past nor
+          foresee the future, we can shape our existence
+          <br /> one stylish day at a time. A life illuminated by daily
+          elegance is a life beautifully lived.
         </p>
-      </div>
-      <div className="ay_content">
+      </section>
+      <section className="ay_content">
         <svg
           className="left_line"
           width="720"
@@ -75,7 +77,7 @@ const AboutYEOWOON = () => {
           />
         </svg>
 
-        <div className="ay_rep">
+        <section className="ay_rep">
           <Image
             src={"/img/about/aboutRep.jpg"}
             width={250}
@@ -84,25 +86,25 @@ const AboutYEOWOON = () => {
             alt={"aboutRep"}
           />
 
-          <div className="ay_rep_script">
+          <figure className="ay_rep_script">
             <h4 className={notoSansExtraBold.className}>
               Jung
               <br /> Soonhee
             </h4>
             <p>
-              At the heart of my business lies a belief in the power
-              of human connection.
+              At the heart of my business lies a belief in the power of
+              human connection.
             </p>
             <p>
               I value every individual - from our employees to our
               partners.
             </p>
             <p>
-              Together, we nurture their potential, working
-              hand-in-hand to build a thriving business.
+              Together, we nurture their potential, working hand-in-hand to
+              build a thriving business.
             </p>
-          </div>
-        </div>
+          </figure>
+        </section>
         <svg
           className="right_line"
           width="721"
@@ -117,8 +119,8 @@ const AboutYEOWOON = () => {
             strokeWidth="4"
           />
         </svg>
-      </div>
-    </div>
+      </section>
+    </article>
   );
 };
 

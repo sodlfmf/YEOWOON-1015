@@ -4,10 +4,10 @@ import { aboutTeam } from "@/mock/about/about";
 
 const AboutTeamItem = () => {
   return (
-    <div className="at_item_container">
+    <section className="at_item_container">
       {aboutTeam.map(({ id, imgUrl, title, script }) => {
         return (
-          <div key={id}>
+          <figure key={id}>
             <Image
               className={`aboutTeam_img ${id}`}
               priority
@@ -17,14 +17,14 @@ const AboutTeamItem = () => {
               height={480}
               alt={`aboutTeam-img-${id}`}
             />
-            <div className="at_content">
+            <label className="at_content">
               <h3 className="notobold">{title}</h3>
               <p>{script}</p>
-            </div>
-          </div>
+            </label>
+          </figure>
         );
       })}
-    </div>
+    </section>
   );
 };
 

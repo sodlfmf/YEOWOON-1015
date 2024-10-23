@@ -16,10 +16,10 @@ const AboutSwiper = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
 
   return (
-    <div className="as_container">
-      <div className="swiperTitle notobold">
+    <article className="as_container">
+      <header className="swiperTitle notobold">
         <p>Strengthen of Us</p>
-      </div>
+      </header>
       <Swiper
         breakpoints={{
           374: {
@@ -50,27 +50,28 @@ const AboutSwiper = () => {
         {aboutSwiper.map(({ id, ImgUrl, label, script }) => {
           return (
             <SwiperSlide key={id} className="about_swiperSlide">
-              <div
-                className={`swiperImg ${notoSansBlack.className}`}
-                // style={{
-                //   backgroundImage: `url(${ImgUrl})`,
-                // }}>
-                >
-                  <Image className="swiperImg_file" src={ImgUrl} alt={label}  width={400} height={160} ></Image>
+              <figure className={`swiperImg ${notoSansBlack.className}`}>
+                <Image
+                  className="swiperImg_file"
+                  src={ImgUrl}
+                  alt={label}
+                  width={400}
+                  height={160}
+                />
                 <p>
                   <Script param={label} />
                 </p>
-              </div>
-              <div className="swiperScript">
+              </figure>
+              <label className="swiperScript">
                 <span>
                   <Script param={script} />
                 </span>
-              </div>
+              </label>
             </SwiperSlide>
           );
         })}
       </Swiper>
-    </div>
+    </article>
   );
 };
 

@@ -26,13 +26,13 @@ const AboutHQ = () => {
   }, []);
   const pathname = usePathname().replace("/", "");
   return (
-    <div
+    <article
       className={`ahq_container ${
         pathname !== "about" && width <= 1080 ? `mobile_footer` : ""
       } ${notoSansBold.className}`}>
-      <div className="ahq_title">Head Quarters</div>
-      <div className="ahq_content">
-        <div className="ahq_img">
+      <header className="ahq_title">Head Quarters</header>
+      <section className="ahq_content">
+        <figure className="ahq_img">
           <Image
             priority
             style={{}}
@@ -41,8 +41,8 @@ const AboutHQ = () => {
             height={560}
             alt={"HQ Image"}
           />
-        </div>
-        <div className="ahq_map notosans">
+        </figure>
+        <figure className="ahq_map notosans">
           <div>
             <iframe
               className="gmap"
@@ -60,10 +60,10 @@ const AboutHQ = () => {
             <p>7, Insadong 1-gil, Jongno-gu, Seoul,</p>
             <p>Republic of Korea</p>
           </div>
-        </div>
-      </div>
+        </figure>
+      </section>
       <AboutHqFooter />
-    </div>
+    </article>
   );
 };
 

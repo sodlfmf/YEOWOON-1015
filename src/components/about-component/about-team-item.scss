@@ -29,7 +29,7 @@
 
 @media screen and (max-width: 1440px) {
   .at_item_container {
-    > div {
+    > figure {
       text-align: center;
       Img {
         width: 300px;
@@ -50,7 +50,7 @@
 
 @media screen and (max-width: 1280px) {
   .at_item_container {
-    > div {
+    > figure {
       Img {
         width: 250px;
         height: 330px;
@@ -77,7 +77,7 @@
   .at_item_container {
     flex-direction: column;
 
-    > div {
+    > figure {
       img {
         @extend %item-Img-1080;
       }
@@ -98,13 +98,13 @@
       }
     }
 
-    > div:nth-child(1) {
+    > figure:nth-child(1) {
       order: 2;
     }
-    > div:nth-child(2) {
+    > figure:nth-child(2) {
       order: 1;
     }
-    > div:nth-child(3) {
+    > figure:nth-child(3) {
       order: 3;
     }
   }
@@ -127,7 +127,7 @@
   .at_item_container {
     padding: 1rem 0 0 0;
 
-    > div {
+    > figure {
       img {
         @extend %item-Img;
       }
@@ -157,7 +157,7 @@
   .at_item_container {
     padding: 1rem 0 0 0;
 
-    > div {
+    > figure {
       img {
         @extend %item-Img2;
       }

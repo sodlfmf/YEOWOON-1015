@@ -124,9 +124,9 @@ const AboutTl = () => {
   // })
 
   return (
-    <div className="atl_container" ref={tlRef}>
-      <div className="atl_contents">
-        <div className="atl_img">
+    <article className="atl_container" ref={tlRef}>
+      <section className="atl_contents">
+        <figure className="atl_img">
           {tlImg.map(({ l, r }, i) => {
             return (
               <div className="imgLR" key={i}>
@@ -152,17 +152,17 @@ const AboutTl = () => {
 
           {tlyear.map(({ fyear, syear }, i) => {
             return (
-              <div key={i} className="atl_year_digit">
+              <section key={i} className="atl_year_digit">
                 <div className="yearF">
                   <h2 className={`year${i}`}>{fyear} ~</h2>
                 </div>
                 <div className="yearS">
                   <h2 className={`year${i}`}>{syear}</h2>
                 </div>
-              </div>
+              </section>
             );
           })}
-        </div>
+        </figure>
         <svg
           className="tl_line_horizon"
           height="4"
@@ -178,13 +178,13 @@ const AboutTl = () => {
         </svg>
 
         <AboutTlItem />
-        <div className="scroll">
+        <figure className="scroll">
           <CollNavs />
-        </div>
-      </div>
+        </figure>
+      </section>
       <div className="atl_end"></div>
       {/* <div className="widthscroll"><div id="scrollbar"></div></div> */}
-    </div>
+    </article>
   );
 };
 
