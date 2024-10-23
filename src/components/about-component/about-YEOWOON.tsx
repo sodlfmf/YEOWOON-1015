@@ -53,7 +53,7 @@ const AboutYEOWOON = () => {
         </h4>
       </header>
       <section className="ay_subtitle">
-        <h3 className={notoSansExtraBold.className}>About YEOWOON</h3>
+        <h2 className={notoSansExtraBold.className}>About YEOWOON</h2>
         <p className={Karla.className}>
           The present is all we have. While we cannot alter the past nor
           foresee the future, we can shape our existence

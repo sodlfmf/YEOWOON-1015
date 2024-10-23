@@ -30,7 +30,9 @@ const AboutHQ = () => {
       className={`ahq_container ${
         pathname !== "about" && width <= 1080 ? `mobile_footer` : ""
       } ${notoSansBold.className}`}>
-      <header className="ahq_title">Head Quarters</header>
+      <header className="ahq_title">
+        <h2>Head Quarters</h2>
+      </header>
       <section className="ahq_content">
         <figure className="ahq_img">
           <Image

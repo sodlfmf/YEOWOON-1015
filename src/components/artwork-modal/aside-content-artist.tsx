@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const ArtistAsideContent = ({ ...item }) => {
   return (
     <>
@@ -7,28 +9,25 @@ const ArtistAsideContent = ({ ...item }) => {
         {item.born === 0 ? null : <p>{item.born}</p>}
       </div>
       <div className="artsist_address">
-        <span>Instagram /</span>
-        {typeof item.Instagram === "string" ? (
-          <p>{item.Instagram} </p>
-        ) : (
-          item.Instagram.map((insta: string, i: number) => (
-            <div key={i}>
-              <p>{insta}</p>
-            </div>
-          ))
-        )}
+        <p>
+          {typeof item.Instagram === "string" ? (
+            <>Instagram /{item.Instagram}</>
+          ) : (
+            item.Instagram.map((insta: string, i: number) => (
+              <div key={i}>
+                Instagram / &nbsp;
+                <Link href={`http://instagram.com/insta`}>{insta}</Link>
+              </div>
+            ))
+          )}
+        </p>
         {item.WebSite === "" ? null : (
           <p>
-            <span>Website /</span>
-            <br /> {item.WebSite}/
+            Website /&nbsp;
+            <Link href={`http://${item.WebSite}`}>{item.WebSite}</Link>
           </p>
         )}
-        {item.Email === "" ? null : (
-          <p>
-            E-mail /<br />
-            {item.Email}
-          </p>
-        )}
+        {item.Email === "" ? null : <p>E-mail / {item.Email}</p>}
       </div>
     </>
   );

@@ -21,7 +21,7 @@ const MenuModal = () => {
       document.body.style.overflowY = "hidden";
       gsap.to(".main_container", {
         position: "fixed",
-        height: "100%",
+        height: "70%",
         width: "100%",
       });
       // gsap.to(".main_about_container", { display: "none" });
@@ -56,13 +56,13 @@ const MenuModal = () => {
       display: "list-item",
     })
       .to(".archive_sub_ul", {
-        padding: "1rem",
+        padding: "1.5rem",
       })
       .to(
         ".archive_sub_li",
         {
           duration: 0.5,
-          height: "2rem",
+          height: "2.5rem",
         },
         "<"
       );

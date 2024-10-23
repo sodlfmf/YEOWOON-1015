@@ -18,7 +18,7 @@ const AboutSwiper = () => {
   return (
     <article className="as_container">
       <header className="swiperTitle notobold">
-        <p>Strengthen of Us</p>
+        <h2>Strengthen of Us</h2>
       </header>
       <Swiper
         breakpoints={{

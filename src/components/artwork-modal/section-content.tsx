@@ -21,7 +21,9 @@ const SectionContent = ({ ...item }) => {
         <h2>
           {isModalTypeArtist === false
             ? item.title
-            : `${item.artist} & S.tree Collaboration`}
+            : `${item.artist}& S.tree`}{" "}
+          &nbsp;
+          <span>Collaboration</span>
         </h2>
         <div className="art_modal_close_Btn">
           <button
