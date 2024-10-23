@@ -3,13 +3,13 @@ import localFont from "next/font/local";
 export const Karla = localFont({
   src: "fonts/Karla-Variable.woff2",
   variable: "--font-karla-variable",
-  weight: "100" , 
+  weight: "100",
   display: "swap",
 });
 export const KarlaLight = localFont({
   src: "fonts/Karla-Light.woff2",
   variable: "--font-karla-light",
-  weight: "100" , 
+  weight: "100",
   display: "swap",
 });
 
@@ -17,57 +17,58 @@ export const notoSans = localFont({
   src: "fonts/NotoSans-Regular.woff2",
   variable: "--font-NotoSans-Regular",
   display: "swap",
-  weight: "900" , 
-})
+  weight: "900",
+});
 
 export const notoSansExtraBold = localFont({
   src: "fonts/NotoSans-ExtraBold.woff2",
   variable: "--font-NotoSans-ExtraBold",
-  weight: "900" , 
-  display: "swap"
-})
+  weight: "900",
+  display: "swap",
+});
 export const notoSansBlack = localFont({
   src: "fonts/NotoSans-Black.woff2",
   variable: "--font-NotoSans-black",
-  weight: "100" , 
-  display: "swap"
-})
+  weight: "100",
+  display: "swap",
+});
 export const notoSansBold = localFont({
   src: "fonts/NotoSans-Bold.woff2",
   variable: "--font-NotoSans-Bold",
-  display: "swap"
-})
+  display: "swap",
+});
 export const notoSansmedium = localFont({
   src: "fonts/NotoSans-Medium.woff2",
   variable: "--font-NotoSans-mediun",
-  display: "swap"
-})
+  display: "swap",
+});
 export const notoSansSemiBold = localFont({
-  src: "fonts/NotoSans-Semibold.woff2",
+  src: "fonts/NotoSans-SemiBold.woff2",
   variable: "--font-NotoSans-semiBold",
-  display: "swap"
-})
+  display: "swap",
+});
 
 export const trirong = localFont({
   src: "fonts/Trirong-Regular.woff2",
-  variable:"--font-Trirong-regular",weight: "800" , 
-  
-  display:"swap"
-})
+  variable: "--font-Trirong-regular",
+  weight: "800",
+
+  display: "swap",
+});
 
 export const karlaBold = localFont({
   src: "fonts/Karla-Bold.woff2",
   variable: "--font-Karla-Bold",
-  display: "swap"
-})
+  display: "swap",
+});
 
 export const kottaOne = localFont({
-  src : "fonts/KottaOne-Regular.woff2",
+  src: "fonts/KottaOne-Regular.woff2",
   variable: "--font-KottaOne-regular",
-  weight: "800" , 
-  display: "swap"
-})
-const fonts =[
+  weight: "800",
+  display: "swap",
+});
+const fonts = [
   Karla,
   KarlaLight,
   notoSans,
@@ -78,7 +79,7 @@ const fonts =[
   notoSansSemiBold,
   trirong,
   kottaOne,
-  karlaBold
-]
+  karlaBold,
+];
 
-export const fontClassname= fonts.map((font)=> font.variable).join(" ")
+export const fontClassname = fonts.map((font) => font.variable).join(" ");
