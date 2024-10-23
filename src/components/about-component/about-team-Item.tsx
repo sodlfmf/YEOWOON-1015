@@ -18,7 +18,7 @@ const AboutTeamItem = () => {
               alt={`aboutTeam-img-${id}`}
             />
             <div className="at_content">
-              <h3>{title}</h3>
+              <h3 className="notobold">{title}</h3>
               <p>{script}</p>
             </div>
           </div>

@@ -15,7 +15,7 @@ const MainHeader = () => {
   const [active_sub, setActive_sub] = useState(false);
 
   return (
-    <header className="header">
+    <header className="header notoblack">
       <div className="bar_container">
         <svg
           onClick={() => setIsModalOpen(true)}

@@ -121,7 +121,7 @@ const Contact=()=>{
             <MenuModal />
             <div>
                 <div className="contact_Us">
-                    <h1>Contact us</h1>
+                    <h1 className='notoExbold'>Contact us</h1>
                     <form className='sandMail' method='post' 
                          onSubmit={onSubmit}   >
                         <div>
@@ -129,7 +129,7 @@ const Contact=()=>{
                             <div><input id="email" name="email" placeholder="Email" onChange={onchange} value={contact.email} autoComplete='off' ></input></div>
                             <div><textarea id="inquiry" name="inquiry" rows={1} placeholder="Inquiry" onChange={onchange} value={contact.inquiry} autoComplete='off'></textarea></div>
                         </div>
-                        <button ><p>SUBMIT</p></button>
+                        <button ><p className='notoblack'>SUBMIT</p></button>
                     </form>
                         <div className='submit_message' id="sm1"><p>{submitMessage1}<span></span></p></div>
                         <div className='submit_message' id="sm2"><p>{submitMessage2}<span></span></p></div>
@@ -138,7 +138,7 @@ const Contact=()=>{
             <div className="contact_link">
                 <div>
                     <div className="mailIcon"><FontAwesomeIcon icon={faEnvelope} size="6x" /></div>
-                    <div><a href="mailto:yeowoon@yeowoon.co.kr"><b>yeowoon@yeowoon.co.kr</b></a></div>
+                    <div><a href="mailto:yeowoon@yeowoon.co.kr"><b className='notoExbold'>yeowoon@yeowoon.co.kr</b></a></div>
                 </div>
                 <div className="links">
                     <div >

@@ -1,6 +1,7 @@
 [
     {
         "id" : "1",
+        "font": "notoblack",
         "logo" : "/img/streeLogo.png",
         "determination" : "FIND YOUR BLUE",
         "imgUrl" : "/img/stree.jpg",
@@ -9,6 +10,7 @@
     },
     {
         "id" : "2",
+        "font" : "kotta",
         "logo" : "/img/soonheeLogo.png",
         "determination" : "MAKE A DAY UNIQUE",
         "imgUrl" : "/img/soonhee.jpg",

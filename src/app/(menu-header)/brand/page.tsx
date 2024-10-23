@@ -24,7 +24,7 @@ const Brand = () => {
               </div>
             </div>
             <div className="brand_link">
-              <div>
+              <div className={item.font}>
                 <p>{item.determination}</p>
               </div>
               <div>

@@ -2,10 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: inherit !important;
   
   button , textarea, input{
-    font-family: inherit
+    font-family: var(--font-NotoSans-Bold)
   }
 
   h1 {
@@ -141,6 +140,10 @@ input:autofill:active {
     align-items: center;
     font-weight: 300;
     margin: 1rem;
+  }
+
+  b{
+    font-family: var(--font-NotoSans-black);
   }
 }
 

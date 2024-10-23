@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 import MainHeader from "@/components/main-header";
 import { Metadata } from "next";
 import Script from "next/script";
-import { Karla } from "@/fonts";
+import { Karla,notoSans,fontClassname} from "@/fonts";
 
 export const metadata: Metadata = {
   // meatadataBase 빌드 후 서비스시 변경 필수
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="kr" className={Karla.className}>
+    <html lang="kr" className={`${notoSans.className} ${fontClassname}`}>
       <body>
         <div className="container">
           <MainHeader />

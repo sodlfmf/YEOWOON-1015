@@ -109,9 +109,36 @@ button {
   white-space: nowrap;
 }
 
-// @media only screen and (min-device-width: 375px) and (max-device-width: 479px) {
-//   html {
-//     // overflow-x: hidden;
-//     //좌측 여백 없앨 수 있으나 헤더와 플로팅바 sticky 작동 안함
-//   }
-// }
+.karla{
+  font-family: var(--font-karla-variable);
+}
+.karlaLight{
+  font-family: var(--font-karla-light);
+}
+.karlaBold{
+  font-family: var(--font-Karla-Bold);
+}
+.notosans{
+  font-family: var(--font-NotoSans-Regular);
+}
+.notoblack{
+  font-family: var(--font-NotoSans-black);
+}
+.notobold{
+  font-family: var(--font-NotoSans-Bold);
+}
+.notosembold{
+  font-family: var(--font-NotoSans-semiBold);
+}
+.notoExbold{
+  font-family: var(--font-NotoSans-ExtraBold);
+}
+.notomediun{
+  font-family: var(--font-NotoSans-mediun);
+}
+.trirong{
+  font-family: var(--font-Trirong-regular);
+}
+.kotta{
+  font-family: var(--font-KottaOne-regular);
+}

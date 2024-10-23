@@ -7,6 +7,7 @@ import { archiveSubMenu, headerMenu } from "../mock/data";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { createModalStore } from "@/store/modal-store";
+import { Karla } from "@/fonts";
 
 const AboutArchiveContactHeader = () => {
   const pathname = usePathname().replace("/", "");
@@ -17,7 +18,7 @@ const AboutArchiveContactHeader = () => {
     <header
       className={`menu_header ${
         pathname === "brand" ? "header_brand" : ""
-      }`}>
+      } karlaBold`}>
       <div className="menu_bar_container">
         <svg
           onClick={() => setIsModalOpen(true)}

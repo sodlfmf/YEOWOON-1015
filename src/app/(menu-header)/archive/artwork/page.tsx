@@ -98,7 +98,7 @@ const Artwork = () => {
 
   return (
     <section className="artwork_container">
-      <h1>ART WORK</h1>
+      <h1 className="notoblack">ART WORK</h1>
 
       <main className="artwork_grid">
         <article className="camp item_container">

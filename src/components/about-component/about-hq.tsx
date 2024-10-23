@@ -28,7 +28,7 @@ const AboutHQ = () => {
     <div
       className={`ahq_container ${
         pathname !== "about" && width <= 1080 ? `mobile_footer` : ""
-      }`}>
+      } notobold`}>
       <div className="ahq_title">Head Quarters</div>
       <div className="ahq_content">
         <div className="ahq_img">
@@ -41,7 +41,7 @@ const AboutHQ = () => {
             alt={"HQ Image"}
           />
         </div>
-        <div className="ahq_map">
+        <div className="ahq_map notosans">
           <div>
             <iframe
               className="gmap"

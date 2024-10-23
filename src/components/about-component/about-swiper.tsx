@@ -16,7 +16,7 @@ const AboutSwiper = () => {
 
   return (
     <div className="as_container">
-      <div className="swiperTitle">
+      <div className="swiperTitle notobold">
         <p>Strengthen of Us</p>
       </div>
       <Swiper
@@ -50,7 +50,7 @@ const AboutSwiper = () => {
           return (
             <SwiperSlide key={id} className="about_swiperSlide">
               <div
-                className="swiperImg"
+                className="swiperImg notoblack"
                 // style={{
                 //   backgroundImage: `url(${ImgUrl})`,
                 // }}>

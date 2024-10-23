@@ -33,7 +33,7 @@ const ArtistContent = ({ ...item }) => {
               alt={item.artist}
             />
           </figure>
-          <label className="artwork_script">
+          <label className="artwork_script karlaBold">
             {width <= 1080 ? (
               <article className="artist_short_info">
                 <h2>{item.artist}</h2>

@@ -18,7 +18,7 @@ const AboutTlItem = () => {
       {tlScript.map(({ year, attends }, i) => {
         return (
           <div className="atl_attend_item" key={i} id={`year${i}`}>
-            <h3>{year}</h3>
+            <h3 className="notobold">{year}</h3>
             {attends.map((item, i) => {
               return (
                 <div key={i}>

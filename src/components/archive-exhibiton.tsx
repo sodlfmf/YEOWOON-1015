@@ -68,7 +68,7 @@ const Exhibiton = () =>{
   
   
   return (
-      <div className="exhibition_books">
+      <div className="exhibition_books notoblack">
         {exhibiton.map(({id,title,imgUrl}) =>{
           return (
             <div key={id} className={`${id} book`}><p>{title}</p><div><Image src={imgUrl} style={{}} alt={"EXHIBITON"} width={600} height={80} /></div></div>

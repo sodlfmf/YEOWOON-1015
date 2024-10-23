@@ -15,20 +15,8 @@ import AboutHQ from "@/components/about-component/about-hq";
 import MainFloatingBar from "@/components/main-floating-bar";
 import { useGSAP } from "@gsap/react";
 import { createModalStore } from "@/store/modal-store";
+import { Karla, KarlaLight } from "@/fonts";
 
-// export const useScroll = () => {
-//   const [state, setState] = useState({
-//     y: 0,
-//   });
-//   const onScroll = () => {
-//     setState({ y: window.scrollY });
-//   };
-//   useEffect(() => {
-//     window.addEventListener("scroll", onScroll);
-//     return () => window.removeEventListener("scroll", onScroll);
-//   }, []);
-//   return state;
-// };
 
 export default function Home() {
   gsap.registerPlugin(gsap);
@@ -88,7 +76,7 @@ export default function Home() {
   return (
     <>
       <div
-        className="main_bg"
+        className={`main_bg ${KarlaLight.className}`}
         onTouchMove={(e) => {
           if (isModalOpen === true) return;
           if (wheel === true) {
