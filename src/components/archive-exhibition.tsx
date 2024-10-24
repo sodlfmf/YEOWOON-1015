@@ -1,6 +1,6 @@
 import { exhibiton } from "@/mock/data"
 import Image from "next/image"
-import "./archive-exhibiton.scss"
+import "./archive-exhibition.scss"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import {ScrollToPlugin} from "gsap/ScrollToPlugin"

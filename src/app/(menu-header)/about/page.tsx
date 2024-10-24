@@ -11,13 +11,14 @@ import AboutHQ from "@/components/about-component/about-hq";
 import MenuModal from "@/components/menu-modal";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
+import { notoSansBlack} from "@/fonts";
 
 gsap.registerPlugin(gsap);
 
 export const AboutTeam = () => {
   return (
     <article className="at_container">
-      <header className="at_title">Our Team</header>
+      <header className={`at_title ${notoSansBlack.className}`}>Our Team</header>
       <AboutTeamItem />
     </article>
   );

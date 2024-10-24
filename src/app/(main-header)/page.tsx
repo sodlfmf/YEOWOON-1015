@@ -15,7 +15,7 @@ import AboutHQ from "@/components/about-component/about-hq";
 import MainFloatingBar from "@/components/main-floating-bar";
 import { useGSAP } from "@gsap/react";
 import { createModalStore } from "@/store/modal-store";
-import { Karla, KarlaLight } from "@/fonts";
+import { Karla, KarlaLight, KarlaMedium} from "@/fonts";
 
 export default function Home() {
   gsap.registerPlugin(gsap);
@@ -103,7 +103,7 @@ export default function Home() {
             alt={"mainTitle"}
           />
           <div className="script_1">
-            <p>It's uncustomary joy after sentiment fades down</p>
+            <p className={KarlaMedium.className}>It's uncustomary joy after sentiment fades down</p>
           </div>
           <div className="script_2">
             <p>
