@@ -68,9 +68,6 @@ importers:
       swiper:
         specifier: ^11.1.14
         version: 11.1.14
-      tua-body-scroll-lock:
-        specifier: ^1.5.1
-        version: 1.5.1
       zustand:
         specifier: 5.0.0-rc.2
         version: 5.0.0-rc.2(@types/react@18.3.7)(react@19.0.0-rc-f994737d14-20240522)
@@ -1580,9 +1577,6 @@ packages:
 
   tslib@2.7.0:
     resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
-
-  tua-body-scroll-lock@1.5.1:
-    resolution: {integrity: sha512-AOjusG9EjTGxqqL1xqg6JeMauJ+IQoX9ITW1qP7UugySUdH6lzi2CqJRmU+oYqOv7vCQjOs5CQrjIakGlbOenQ==}
 
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
@@ -3365,8 +3359,6 @@ snapshots:
       strip-bom: 3.0.0
 
   tslib@2.7.0: {}
-
-  tua-body-scroll-lock@1.5.1: {}
 
   type-check@0.4.0:
     dependencies:

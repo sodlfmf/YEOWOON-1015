@@ -4,13 +4,15 @@ import { ReactNode } from "react";
 import AboutArchiveContactHeader from "@/components/menu-header";
 import { Metadata } from "next";
 import Script from "next/script";
-import { Karla,notoSans } from "@/fonts";
+import { Karla, notoSans } from "@/fonts";
 // import { fontClassname} from "@/fonts";
-
 
 export const metadata: Metadata = {
   // meatadataBase 빌드 후 서비스시 변경 필수
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://www.yeowoon.co.kr/"),
+  alternates: {
+    canonical: "/",
+  },
   title: "YEOWOON | 여운",
   description:
     "We create jewerly that lasts a long time, like a yeowoon, a feeling people can look back on for as long as they want",

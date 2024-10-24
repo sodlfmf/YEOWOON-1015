@@ -9,6 +9,9 @@ import { Karla, notoSans, fontClassname } from "@/fonts";
 export const metadata: Metadata = {
   // meatadataBase 빌드 후 서비스시 변경 필수
   metadataBase: new URL("https://www.yeowoon.co.kr/"),
+  alternates: {
+    canonical: "/",
+  },
   title: "YEOWOON | 여운",
   description:
     "We create jewerly that lasts a long time, like a yeowoon, a feeling people can look back on for as long as they want",
