@@ -11,7 +11,6 @@
   align-items: center;
   overscroll-behavior: none;
 
-  // background-color: blue;
   &::backdrop,
   & + .backdrop {
     background: rgba(30, 30, 30, 0.7);
@@ -99,7 +98,6 @@
   }
 
   .art_modal_header {
-    // border: 5px solid yellow;
     display: flex;
     align-items: center;
     grid-column: 1 / 3;
@@ -119,7 +117,6 @@
   }
 
   .art_modal_aside {
-    // border: 5px solid blue;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
   }
@@ -153,10 +150,7 @@
       .article_content {
         .camp_artwork_img {
           display: grid;
-          grid-template-columns: repeat(
-            auto-fill,
-            minmax(400px, 1fr)
-          );
+          grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
           grid-template-rows: repeat(auto-fill, minmax(400px, 1fr));
           img {
             object-fit: contain;
@@ -166,7 +160,6 @@
     }
   }
   .art_modal_article {
-    // border: 5px solid red;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     display: grid;
@@ -415,12 +408,10 @@
           .artist_short_info {
             margin: 1rem 0;
             display: flex;
-            // justify-content: space-evenly;
             align-items: flex-end;
             position: relative;
             gap: 2.5rem;
             h2 {
-              // flex-grow: 1;
               font-size: 2.2rem;
             }
             img {
@@ -473,7 +464,6 @@
       .article_content {
         display: flex;
         justify-content: center;
-        // align-content: center;
         .campaign_video {
           position: relative;
           top: 3rem;
@@ -494,6 +484,9 @@
       > div:nth-child(2) {
         position: absolute;
         bottom: 1rem;
+        span {
+          width: 35px;
+        }
       }
     }
   }
@@ -533,10 +526,7 @@
             display: grid;
             margin: 0 auto;
             max-width: 85%;
-            grid-template-columns: repeat(
-              auto-fill,
-              minmax(315px, 1fr)
-            );
+            grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
             grid-template-rows: repeat(auto-fill, minmax(210px, 1fr));
             > div {
               height: 300px;
@@ -556,10 +546,7 @@
       grid-template-rows: 5rem 1fr 3rem;
       .art_modal_article {
         .artist_imgs {
-          grid-template-columns: repeat(
-            auto-fill,
-            minmax(340px, 1fr)
-          );
+          grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
         }
         .article_content {
           display: flex;
@@ -597,6 +584,7 @@
               h2 {
                 font-size: 1.5rem;
                 letter-spacing: -0.1rem;
+                // width: 10rem;
               }
               .insta_container {
                 display: flex;
@@ -674,7 +662,7 @@
             .artist_short_info {
               margin: 0 auto;
               padding-block: 1rem;
-              width: 21rem;
+              // width: 21rem;
               gap: 1rem;
               h2 {
                 font-size: 1.25rem;
