@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overscroll-behavior: none;
 
   // background-color: blue;
   &::backdrop,
@@ -152,7 +153,10 @@
       .article_content {
         .camp_artwork_img {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+          grid-template-columns: repeat(
+            auto-fill,
+            minmax(400px, 1fr)
+          );
           grid-template-rows: repeat(auto-fill, minmax(400px, 1fr));
           img {
             object-fit: contain;
@@ -499,12 +503,16 @@
     .art_modal_grid.campType {
       padding: unset;
       grid-template-columns: 1fr;
-      grid-template-rows: 15rem 45rem 3rem;
+      grid-template-rows: 12rem 45rem 3rem;
       .art_modal_header {
         h2 {
+          font-size: 2rem;
           text-align: center;
           position: relative;
           top: 1.7rem;
+          span {
+            font-size: 1.5rem;
+          }
         }
         .art_modal_close_Btn {
           right: 1.3rem;
@@ -525,7 +533,10 @@
             display: grid;
             margin: 0 auto;
             max-width: 85%;
-            grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+            grid-template-columns: repeat(
+              auto-fill,
+              minmax(315px, 1fr)
+            );
             grid-template-rows: repeat(auto-fill, minmax(210px, 1fr));
             > div {
               height: 300px;
@@ -545,7 +556,10 @@
       grid-template-rows: 5rem 1fr 3rem;
       .art_modal_article {
         .artist_imgs {
-          grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+          grid-template-columns: repeat(
+            auto-fill,
+            minmax(340px, 1fr)
+          );
         }
         .article_content {
           display: flex;
@@ -634,9 +648,11 @@
         }
       }
     }
-
+    .art_modal_grid.artistType.no_footer {
+      grid-template-rows: 5rem 38rem;
+    }
     .art_modal_grid.artistType {
-      grid-template-rows: 3rem 44rem 18rem;
+      grid-template-rows: 3rem 40rem 18rem;
 
       .art_modal_header {
         .art_modal_close_Btn {
@@ -673,8 +689,9 @@
 
           .artist_artwork_img {
             img {
-              width: 270px;
-              height: 300px;
+              object-fit: contain;
+              width: 70%;
+              height: 70%;
             }
           }
         }

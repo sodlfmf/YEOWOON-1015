@@ -14,10 +14,10 @@ const ArtistAsideContent = ({ ...item }) => {
             <>Instagram /{item.Instagram}</>
           ) : (
             item.Instagram.map((insta: string, i: number) => (
-              <div key={i}>
+              <span key={i}>
                 Instagram / &nbsp;
                 <Link href={`http://instagram.com/insta`}>{insta}</Link>
-              </div>
+              </span>
             ))
           )}
         </p>
