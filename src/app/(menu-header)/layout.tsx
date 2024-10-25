@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "YEOWOON | 여운",
   description:
     "We create jewerly that lasts a long time, like a yeowoon, a feeling people can look back on for as long as they want",
+  icons: {
+    icon: "/favicon-96x96.png",
+  },
   openGraph: {
     title: "YEOWOON | 여운",
     description:

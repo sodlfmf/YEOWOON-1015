@@ -22,6 +22,9 @@ export const metadata: Metadata = {
         "9f0c7024c0d45b2bce2a98a3520ff41794216ea1",
     },
   },
+  icons: {
+    icon: "/favicon-96x96.png",
+  },
   openGraph: {
     title: "YEOWOON | 여운",
     description:
